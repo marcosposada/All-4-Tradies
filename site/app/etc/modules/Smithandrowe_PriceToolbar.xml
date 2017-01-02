@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Smithandrowe_PriceToolbar>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Smithandrowe_PriceToolbar>
+    </modules>
+</config>

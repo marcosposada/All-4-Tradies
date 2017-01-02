@@ -1,0 +1,71 @@
+<?php
+/**
+ * Appmerce - Applications for Ecommerce
+ * http://ww.appmerce.com
+ *
+ * @extension   eWAY Rapid API 3.1
+ * @type        Payment method
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category    Magento
+ * @package     Appmerce_Eway
+ * @copyright   Copyright (c) 2011-2014 Appmerce (http://www.appmerce.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+
+<script type="text/javascript">
+//<![CDATA[
+/* need for use onestepcheckout */           
+if (typeof(Review) != 'undefined'){ 
+	Review.prototype.save = function() {
+		if (checkout.loadWaiting!=false) return;	
+		checkout.setLoadWaiting('review');
+	}
+	checkout.setLoadWaiting('review');
+}
+
+var cc_owner = $('eway_rapid_cc_owner').value;
+var cc_number = $('eway_rapid_cc_number').value;
+var expiration = $('eway_rapid_expiration').value;
+	expiration = expiration.length==1?"0"+expiration:expiration; 
+var expiration_yr = $('eway_rapid_expiration_yr').value;
+expiration_yr = expiration_yr.slice(-2);
+var cc_cid = $('eway_rapid_cc_cid').value;
+
+var eway = new Eway();
+var q = Object.toQueryString({"EWAY_CARDNAME":cc_owner,"EWAY_CARDNUMBER":cc_number,"EWAY_CARDEXPIRYMONTH":expiration,"EWAY_CARDEXPIRYYEAR":expiration_yr,"EWAY_CARDCVN":cc_cid,"EWAY_CARDSTARTMONTH":"","EWAY_CARDSTARTYEAR":"","EWAY_ACCESSCODE":"<?php echo $this->getAccessCode() ?>"});
+eway.doPay('<?php echo $this->getFormActionURL() ?>', q, function(json){
+	if (json.Is3DSecure) {
+	    window.location.replace(json.RedirectUrl);
+		/* HTTP_REFERER 
+		var form = new Element('form', {'method': 'POST', 'action': '<?php echo $this->getUrl('eway/rapid/redirect',array('_secure'=>true))?>'});
+		$(form).insert(new Element('input', {'type': 'hidden', 'name':'D3SecureUrl', 'value':json.RedirectUrl}));
+		$(document.body).insert(form);	
+		form.submit();
+		*/
+	} else {				
+		var request = new Ajax.Request('<?php echo $this->getUrl('eway/rapid/confirm',array('_secure'=>true))?>', {
+			method:'post',
+			parameters:json,
+			onComplete: function(transport){
+				var response = eval('('+transport.responseText+')');
+				if (response.success) {
+					window.location.replace(response.redirect);
+	            } else {
+	            	window.location.replace(response.redirect);
+				}
+			},
+			onSuccess: function(){},
+			onFailure: function(){window.location.replace('<?php echo $this->getUrl('checkout/onepage/failure',array('_secure'=>true)) ?>');}
+		});		
+	}
+});
+//]]>
+</script>

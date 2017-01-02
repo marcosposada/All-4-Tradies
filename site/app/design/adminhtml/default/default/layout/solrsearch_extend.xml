@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<solrbridge_admin_adminhtml_solrsearch_index>
+		<update handle="override_solrsearch_index_management"/>
+	</solrbridge_admin_adminhtml_solrsearch_index>
+	<override_solrsearch_index_management>
+		<remove name="adminhtml_solrsearch" />
+		<reference name="content">
+			<block type="sbsext/adminhtml_index_management" name="adminhtml_solrsearch_extend" as="adminhtml_solrsearch" template="solrsearch/extend/solrsearch.phtml"/>
+		</reference>
+	</override_solrsearch_index_management>
+</layout>

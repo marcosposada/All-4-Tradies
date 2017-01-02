@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Smithandrowe_Startrack>
+			<version>1.0.0</version>
+		</Smithandrowe_Startrack>
+	</modules>
+    <frontend>
+        <routers>
+            <track>
+                <use>standard</use>
+                <args>
+                    <module>Smithandrowe_Startrack</module>
+                    <frontName>track</frontName>
+                </args>
+            </track>
+        </routers>
+    </frontend>
+
+	<global>
+		<blocks>
+			<checkout>
+				<rewrite>
+					<cart_shipping>Smithandrowe_Startrack_Block_Cart_Shipping</cart_shipping>
+				</rewrite>
+			</checkout>
+            <track>
+                <rewrite>
+                    <track>Smithandrowe_Startrack_Block_Track</track>
+                </rewrite>
+            </track>
+
+		</blocks>
+		<helpers>
+			<smithandrowe_startrack>
+				<class>Smithandrowe_Startrack_Helper</class>
+			</smithandrowe_startrack>
+		</helpers>
+		<models>
+			<smithandrowe_startrack>
+				<class>Smithandrowe_Startrack_Model</class>
+			</smithandrowe_startrack>
+		</models>
+	</global>
+	<default>
+		<carriers>
+			<smithandrowe_startrack_express>
+				<active>1</active>
+				<model>smithandrowe_startrack/shipping_carrier_express</model>
+				<title>StarTrack</title>
+				<name>Express</name>
+				<sallowspecific>0</sallowspecific>
+                <servicecodes>EXP,1KN,3KN,5KN,TSE,RET,RE2,ITL,LO2,LOT,PAC,SAT,SDA,IDS</servicecodes>
+			</smithandrowe_startrack_express>
+		</carriers>
+	</default>
+
+</config>

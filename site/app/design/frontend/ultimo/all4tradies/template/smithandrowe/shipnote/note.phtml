@@ -1,0 +1,26 @@
+<!--
+/**
+ * @category   Dh
+ * @package    Dh_Shipnote
+ * @copyright  Copyright (c) 2013 Drew Hunter (http://drewhunter.net)
+ * @license    http://opensource.org/licenses/OSL-3.0  Open Software License (OSL 3.0)
+ */
+-->
+<?php if ($this->canShow()): ?>
+    <b>Additional Options</b>
+    <div id='shipnote'>
+        <div id="shipnoteContent">
+            <label for='shipnote-note'>Job Reference Number</label>
+            <input type="text" id="job-reference" name="job-reference" title="Job Reference Number" class="input-text">
+        </div>
+    </div>
+
+    <div id='shipnote'>
+        <div id="shipnoteContent">
+            <input type="checkbox" name="atl" id="atl" value="1">
+            <p class="agree">If no-one is at the nominated delivery address I authorise for my order to be left according to my instructions.</p>
+            <label for='shipnote-note'><?php echo $this->__(Mage::helper('shipnote')->getFrontendLabel()) ?></label>
+            <textarea id='shipnote-note' name='ship-note' class="input-text" placeholder="Please provide as much description as possible to enable your order to be delivered safely..."></textarea>
+        </div>
+    </div>
+<?php endif; ?>

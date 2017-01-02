@@ -1,0 +1,40 @@
+<div class="box simple_contact ">
+    <form id="simple_contact_form" name="simple_contact_form" action="<?php echo $this->getUrl('forms/') ?>feedback/sendemail" method="post">
+        <div class="fieldset">
+
+            <ul class="form-list">
+                <li class="fields">
+                    <div class="field">
+                        <div class="input-box">
+                            <label for="name">Your Name<em class="required">*</em></label><br>
+                            <input name="your_name" id="your_name" title="your_name" value="" class="required-entry input-text" type="text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="input-box">
+                            <label for="email">E-Mail<em class="required">*</em></label><br>
+                            <input name="email" id="email" title="Email" value="" class="required-entry input-text validate-email" type="text">
+                        </div>
+                    </div>
+                </li>
+                <li class="fields">
+                    <div class="input-box">
+                        <label for="name">Telephone<em class="required">*</em></label><br>
+                        <input name="telephone" id="telephone" title="telephone" value="" class="required-entry input-text" type="text">
+                    </div>
+                </li>
+                <li class="fields">
+                    <div class="input-box"><label for="comment">Feedback</label><br>
+                        <textarea name="comment" id="comment" title="Comment" class="required-entry input-text" style="height:100px;" cols="50" rows="3"></textarea>
+                    </div>
+                </li>
+            </ul>
+            <div class="buttons-set">
+                <!--<p class="required"><?php echo $this->__("<font color='red'>*</font> Required Fields") ?></p>-->
+                <input type="text" name="realSend" style="display: none;">
+                <input type="text" name="type" value="feedback" style="display: none;">
+                <button class="button" type="submit" title="<?php echo $this->__('Submit') ?>" ><span><?php echo $this->__('Submit') ?></span></button>
+            </div>
+            <input type="hidden" name="request_flag" value="1"/>
+    </form>
+</div>

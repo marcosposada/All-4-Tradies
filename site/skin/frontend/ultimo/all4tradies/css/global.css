@@ -1,0 +1,1725 @@
+/**
+ * This file is a container for custom CSS. You can use it to override the default styles of the theme.
+ *
+ * 1. Copy the file "SAMPLE.custom.css" and rename it to "custom.css".
+ *    Otherwise this file will not be loded by Magento.
+ * 2. Enable it in the admin panel.
+ * 3. Uncomment slected sample styles or add your own CSS to override the default styles of the theme.
+ *
+ * Please refer to the user guide for more details.
+ *
+ */
+/* Products
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* Product labels
+-------------------------------------------------------------- */
+/*
+.sticker.new {
+	background-color:#555;
+	color:#fff;
+}
+.sticker.sale {
+	background-color:orange;
+	color:#fff;
+}
+*/
+/* Stock indicator on product page (configurable products):
+icon background color
+-------------------------------------------------------------- */
+/*
+a.availability-only span.icon { background-color:orange; }
+*/
+/* Miscellaneous
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/* Number of products in category (sidebar menu) */
+/*
+.vertnav .number { color: #000; }
+*/
+/* Drop-down caret */
+/*
+.caret {
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+*/
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+.main {
+  padding-top: 0px; }
+
+.header-main .grid-full {
+  margin-right: 0 !important; }
+
+.block-header-top-secondary {
+  text-align: center;
+  margin-top: 10px; }
+  .block-header-top-secondary .account-links {
+    text-align: right; }
+    .block-header-top-secondary .account-links li {
+      display: inline-block;
+      margin: 0px; }
+      .block-header-top-secondary .account-links li .first, .block-header-top-secondary .account-links li .last {
+        margin: 0; }
+        .block-header-top-secondary .account-links li .first a, .block-header-top-secondary .account-links li .last a {
+          color: black; }
+  @media (min-width: 768px) {
+    .block-header-top-secondary {
+      text-align: right;
+      margin-top: 50px; }
+      .block-header-top-secondary .account-links li {
+        margin: 0 10px; } }
+
+#nav {
+  border-bottom: 8px solid #E42F2F; }
+  #nav .level-top > a {
+    padding-top: 10px; }
+    #nav .level-top > a .i-home-w {
+      background-image: url(../images/sprite@2x.png);
+      background-size: 700px 280px;
+      background-position: -17px -229px; }
+    #nav .level-top > a .i-home-bw {
+      background-image: url(../images/sprite@2x.png);
+      background-size: 700px 280px;
+      background-position: -17px -229px; }
+    #nav .level-top > a:hover .i-home-bw {
+      background-position: -17px -158px !important; }
+  #nav .level0-wrapper {
+    border-bottom: 8px solid #fed530; }
+  #nav .level0-wrapper2 {
+    padding: 10px 0px 0px 0px; }
+  #nav ul.level1 > li {
+    border-bottom: 1px dashed #d2d2d2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: none; }
+    #nav ul.level1 > li a {
+      color: black; }
+    #nav ul.level1 > li:hover, #nav ul.level1 > li:active #nav ul.level1 > li:focus {
+      background-color: #fed530;
+      color: black !important; }
+  #nav .section-title {
+    font-size: 1.3em;
+    border-color: black;
+    padding-top: 0px;
+    margin-top: -5px; }
+  #nav .slider-arrows1-pos-top-right .owl-controls .owl-buttons {
+    top: -38px; }
+
+#nav.wide ul.level0 > li > a {
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  margin-bottom: 0; }
+
+.nav-block-bottom {
+  background-color: #f0f0f0;
+  border-top: none;
+  height: 100px;
+  overflow-y: hidden;
+  margin: 0;
+  width: 100%; }
+  .nav-block-bottom .section-title {
+    display: none; }
+  .nav-block-bottom .owl-item {
+    transition: background-color 0.2s linear; }
+    .nav-block-bottom .owl-item:hover {
+      background-color: #c1c1c1; }
+  .nav-block-bottom .brand-slider-wrapper {
+    margin-top: 20px; }
+  .nav-block-bottom .brand-slider .item {
+    padding-top: 0; }
+    .nav-block-bottom .brand-slider .item img {
+      width: 70%;
+      height: auto; }
+
+.the-slideshow-wrapper .the-slideshow {
+  margin-right: 0; }
+.the-slideshow-wrapper i {
+  color: white; }
+.the-slideshow-wrapper .the-slideshow-banners {
+  background: white url("../images/slider-right.png") center top no-repeat;
+  height: 237px;
+  overflow: hidden;
+  margin-left: 0;
+  width: 26%; }
+  .the-slideshow-wrapper .the-slideshow-banners > div {
+    height: 40%;
+    text-align: center;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px; }
+  @media (min-width: 961px) {
+    .the-slideshow-wrapper .the-slideshow-banners {
+      height: 309px; } }
+  @media (min-width: 1281px) {
+    .the-slideshow-wrapper .the-slideshow-banners {
+      height: 387px; } }
+  @media (min-width: 64.063em) {
+    .the-slideshow-wrapper .the-slideshow-banners {
+      height: 387px; } }
+.the-slideshow-wrapper .slider-right-01 {
+  height: 60% !important;
+  border-bottom: 1px solid #ffffff;
+  margin-left: 10px;
+  margin-right: 10px; }
+  .the-slideshow-wrapper .slider-right-01 a {
+    text-transform: uppercase; }
+  .the-slideshow-wrapper .slider-right-01 img {
+    width: 85%;
+    margin: 2px auto; }
+    @media (min-width: 1281px) {
+      .the-slideshow-wrapper .slider-right-01 img {
+        width: 95%; } }
+  .the-slideshow-wrapper .slider-right-01 a {
+    width: 87%;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 10px;
+    background-color: #de1d2e;
+    padding: 4px 5px 2px;
+    color: white;
+    font-family: "Luckiest Guy";
+    font-size: 1em;
+    opacity: 0.9;
+    transition: background-color 0.2s linear; }
+    .the-slideshow-wrapper .slider-right-01 a:hover, .the-slideshow-wrapper .slider-right-01 a:active, .the-slideshow-wrapper .slider-right-01 a:focus {
+      background-color: white;
+      color: black; }
+    @media (min-width: 1281px) {
+      .the-slideshow-wrapper .slider-right-01 a {
+        padding: 8px 5px;
+        font-size: 1.2em;
+        width: 140px; } }
+.the-slideshow-wrapper .slider-right-02 {
+  text-align: center;
+  padding-top: 10px; }
+  .the-slideshow-wrapper .slider-right-02 a {
+    text-transform: uppercase; }
+  .the-slideshow-wrapper .slider-right-02 p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.7em;
+    display: none; }
+  .the-slideshow-wrapper .slider-right-02 h3 {
+    font-size: 1em;
+    margin: 2px; }
+  .the-slideshow-wrapper .slider-right-02 h3, .the-slideshow-wrapper .slider-right-02 p {
+    color: white; }
+  @media (min-width: 961px) {
+    .the-slideshow-wrapper .slider-right-02 p {
+      font-size: 1em;
+      display: block; }
+    .the-slideshow-wrapper .slider-right-02 h3 {
+      font-size: 1.5em; } }
+  @media (min-width: 1281px) {
+    .the-slideshow-wrapper .slider-right-02 h3 {
+      font-size: 2em;
+      margin: 10px 20px 0; } }
+.the-slideshow-wrapper #subscribe-form {
+  overflow: visible;
+  width: 100%; }
+  .the-slideshow-wrapper #subscribe-form label {
+    display: none; }
+  .the-slideshow-wrapper #subscribe-form .validation-advice {
+    top: -50px;
+    left: 0;
+    width: 223px; }
+    @media (max-width: 961px) {
+      .the-slideshow-wrapper #subscribe-form .validation-advice {
+        top: -55px;
+        width: 100%;
+        font-size: 0.85em; } }
+  .the-slideshow-wrapper #subscribe-form .input-box {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+  .the-slideshow-wrapper #subscribe-form .input-text, .the-slideshow-wrapper #subscribe-form .button {
+    height: 30px;
+    display: inline; }
+  .the-slideshow-wrapper #subscribe-form .input-text {
+    float: left;
+    width: 100%; }
+  .the-slideshow-wrapper #subscribe-form .button {
+    float: right;
+    width: 100%;
+    margin: 0;
+    background-color: #de1d2e;
+    color: white;
+    padding: 9px;
+    text-align: center;
+    line-height: 15px;
+    transition: background-color 0.2s linear; }
+    .the-slideshow-wrapper #subscribe-form .button span, .the-slideshow-wrapper #subscribe-form .button span span {
+      background-color: transparent;
+      opacity: 1;
+      color: inherit;
+      text-align: inherit;
+      float: none;
+      margin: 0;
+      padding: 0;
+      line-height: 15px;
+      display: inline-block;
+      transition: none; }
+    .the-slideshow-wrapper #subscribe-form .button:hover, .the-slideshow-wrapper #subscribe-form .button:active, .the-slideshow-wrapper #subscribe-form .button:focus {
+      background-color: white;
+      color: black; }
+  @media (min-width: 961px) {
+    .the-slideshow-wrapper #subscribe-form {
+      padding: 0;
+      margin-top: 25px; }
+      .the-slideshow-wrapper #subscribe-form .input-text, .the-slideshow-wrapper #subscribe-form .button {
+        height: 30px;
+        display: inline; }
+      .the-slideshow-wrapper #subscribe-form .input-box {
+        width: 68%; }
+      .the-slideshow-wrapper #subscribe-form .button {
+        width: 31%; } }
+  @media (min-width: 1281px) {
+    .the-slideshow-wrapper #subscribe-form {
+      margin-top: 10px;
+      position: absolute;
+      bottom: 10px;
+      width: 96%;
+      margin: 0 2%;
+      left: 0; } }
+
+.owl-carousel .owl-wrapper-outer {
+  z-index: 2; }
+
+.owl-controls {
+  z-index: 3; }
+
+.owl-pagination {
+  display: none; }
+
+.owl-prev:hover, .owl-next:hover {
+  background-color: #de1d2e !important; }
+
+.manufacturer-product-slider {
+  font-size: 1.5em;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 5px; }
+
+.itemslider-wrapper .item {
+  text-align: center; }
+  .itemslider-wrapper .item .product-name {
+    line-height: 14px;
+    margin-bottom: 5px; }
+    .itemslider-wrapper .item .product-name p {
+      line-height: 17px;
+      color: #2d2d2d; }
+    .itemslider-wrapper .item .product-name span {
+      font-size: 12px; }
+  .itemslider-wrapper .item .price-box {
+    padding-top: 20px;
+    background-color: transparent; }
+    .itemslider-wrapper .item .price-box .price, .itemslider-wrapper .item .price-box .regular-price {
+      font-size: 1em; }
+      .itemslider-wrapper .item .price-box .price .gst-txt, .itemslider-wrapper .item .price-box .price .gst, .itemslider-wrapper .item .price-box .regular-price .gst-txt, .itemslider-wrapper .item .price-box .regular-price .gst {
+        color: #de1d2e; }
+.itemslider-wrapper .owl-controls .owl-buttons {
+  top: -45px !important; }
+
+.nav-block-right .itemslider-wrapper .item {
+  text-align: center; }
+  .nav-block-right .itemslider-wrapper .item .product-name {
+    line-height: 14px;
+    margin-bottom: 5px;
+    word-break: normal; }
+    .nav-block-right .itemslider-wrapper .item .product-name p {
+      color: #2d2d2d; }
+    .nav-block-right .itemslider-wrapper .item .product-name span {
+      font-size: 12px;
+      white-space: normal !important; }
+  .nav-block-right .itemslider-wrapper .item .price-box {
+    background-color: transparent; }
+    .nav-block-right .itemslider-wrapper .item .price-box .price, .nav-block-right .itemslider-wrapper .item .price-box .regular-price .price {
+      font-size: 2em !important;
+      display: block !important;
+      color: #de1d2e !important; }
+      .nav-block-right .itemslider-wrapper .item .price-box .price .gst-txt, .nav-block-right .itemslider-wrapper .item .price-box .price .gst, .nav-block-right .itemslider-wrapper .item .price-box .regular-price .price .gst-txt, .nav-block-right .itemslider-wrapper .item .price-box .regular-price .price .gst {
+        color: #de1d2e;
+        display: block !important; }
+.nav-block-right .itemslider-wrapper .owl-controls .owl-buttons {
+  top: -35px !important; }
+
+.brand-slider .owl-controls .owl-buttons {
+  top: -50px !important; }
+
+.category-title h1 {
+  float: left; }
+.category-title:after {
+  clear: both; }
+
+.catalog-category-block {
+  display: block;
+  margin: 0 0 20px 0; }
+
+.price-toolbar {
+  display: block;
+  float: right;
+  font-family: "Luckiest Guy", georgia, serif;
+  margin-top: 25px;
+  margin-right: 10px; }
+  @media (max-width: 961px) {
+    .price-toolbar {
+      clear: both;
+      display: block;
+      float: none;
+      margin-bottom: 10px; } }
+  .price-toolbar span {
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-right: 6px; }
+  .price-toolbar a {
+    display: inline-block;
+    text-align: left;
+    padding: 6px 6px 4px 6px;
+    line-height: normal;
+    border: 2px solid #75767C;
+    background-color: #CECCCD;
+    font-size: 15px;
+    font-weight: normal; }
+    .price-toolbar a.active, .price-toolbar a:hover {
+      background-color: #57c831;
+      color: #fff;
+      transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+      -moz-transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+      -webkit-transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+      -o-transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out; }
+    .price-toolbar a.ex-gst {
+      margin-left: -5px; }
+    .price-toolbar a .fa-check {
+      font-size: 13px;
+      color: #fff;
+      margin: 0 0 0 3px;
+      padding: 0; }
+
+.featured-product-title {
+  float: left; }
+
+.catalogsearch-result-index .col-main .page-title h1 {
+  font-size: 1.6em !important; }
+
+.catalog-product-view .main {
+  padding-top: 0px; }
+
+.product-view p.product-image.zoom-inside, .product-shop p.product-image.zoom-inside {
+  max-width: none !important; }
+  .product-view p.product-image.zoom-inside img, .product-shop p.product-image.zoom-inside img {
+    width: 100%; }
+.product-view .cont-sku-product-code, .product-shop .cont-sku-product-code {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-align: center; }
+  @media (min-width: 1281px) {
+    .product-view .cont-sku-product-code, .product-shop .cont-sku-product-code {
+      margin-top: -30px;
+      margin-bottom: 30px;
+      text-align: right; } }
+.product-view .manufacturer, .product-shop .manufacturer {
+  color: #de1d2e;
+  font-size: 2em;
+  line-height: 1.2222em;
+  margin-bottom: 5px; }
+.product-view .product-name, .product-shop .product-name {
+  margin-bottom: 0 !important; }
+  .product-view .product-name .name, .product-shop .product-name .name {
+    font-family: Arial;
+    color: #333333;
+    font-size: 1.5em;
+    line-height: 1.2222em;
+    text-transform: none !important;
+    padding-top: 10px;
+    margin-bottom: 28px !important; }
+.product-view .cont-tier-prices, .product-view .cont-box-prices, .product-shop .cont-tier-prices, .product-shop .cont-box-prices {
+  padding: 10px;
+  background-color: #F2F2F2; }
+  .product-view .cont-tier-prices h2, .product-view .cont-box-prices h2, .product-shop .cont-tier-prices h2, .product-shop .cont-box-prices h2 {
+    margin: 0 10px 0 0;
+    padding: 0;
+    vertical-align: middle;
+    display: inline-block;
+    color: #de1d2e;
+    font-size: 1.5em;
+    line-height: 1.2222em; }
+  .product-view .cont-tier-prices ul, .product-view .cont-box-prices ul, .product-shop .cont-tier-prices ul, .product-shop .cont-box-prices ul {
+    padding-left: 0; }
+  .product-view .cont-tier-prices .box-prices li.box-price, .product-view .cont-box-prices .box-prices li.box-price, .product-shop .cont-tier-prices .box-prices li.box-price, .product-shop .cont-box-prices .box-prices li.box-price {
+    line-height: 15px;
+    background: url(../images/img/bullet.png) 0 4px no-repeat;
+    padding: 0 0 0 11px;
+    margin: 3px 0; }
+.product-view .cont-box-prices, .product-shop .cont-box-prices {
+  margin: 10px 0 10px 0;
+  padding: 0; }
+  .product-view .cont-box-prices ul, .product-shop .cont-box-prices ul {
+    padding: 0 10px 5px; }
+  .product-view .cont-box-prices h2, .product-shop .cont-box-prices h2 {
+    padding: 15px 10px 0 10px;
+    color: #2d2d2d; }
+  .product-view .cont-box-prices li.box-price, .product-shop .cont-box-prices li.box-price {
+    padding: 0 !important; }
+  .product-view .cont-box-prices .info, .product-shop .cont-box-prices .info {
+    color: #ffffff;
+    background: #333333;
+    padding: 10px 10px 10px 10px; }
+.product-view .configurable-price-from-label, .product-shop .configurable-price-from-label {
+  font-family: "Luckiest Guy";
+  text-transform: uppercase;
+  font-size: 1.5em; }
+.product-view .price-box, .product-shop .price-box {
+  border-top-style: none !important;
+  border-top-width: 0; }
+  .product-view .price-box .price, .product-shop .price-box .price {
+    font-family: "Luckiest Guy";
+    color: #de1d2e;
+    font-size: 1.8rem !important; }
+    .product-view .price-box .price .price-from, .product-shop .price-box .price .price-from {
+      display: none; }
+  .product-view .price-box br, .product-shop .price-box br {
+    display: none; }
+  .product-view .price-box .gst-txt, .product-shop .price-box .gst-txt {
+    font-family: Arial;
+    font-size: 0.8rem;
+    color: #AAA; }
+  .product-view .price-box .regular-price .price, .product-shop .price-box .regular-price .price {
+    font-size: 1.5em; }
+.product-view .add-to-box, .product-shop .add-to-box {
+  border: none; }
+.product-view .btn-cart span, .product-shop .btn-cart span {
+  background-color: #fed530;
+  color: black;
+  font-family: "Luckiest Guy"; }
+  .product-view .btn-cart span span, .product-shop .btn-cart span span {
+    padding: 12px 15px 8px 15px;
+    margin: 0;
+    line-height: normal;
+    height: auto; }
+.product-view .btn-cart .fa-shopping-cart, .product-shop .btn-cart .fa-shopping-cart {
+  padding-right: 5px; }
+.product-view .add-to-cart, .product-shop .add-to-cart {
+  margin-right: 20px; }
+  @media (max-width: 961px) {
+    .product-view .add-to-cart, .product-shop .add-to-cart {
+      margin-right: 0px; } }
+  .product-view .add-to-cart .qty-wrapper label, .product-shop .add-to-cart .qty-wrapper label {
+    background-color: #F2F2F2;
+    height: 14px;
+    padding: 10px 5px;
+    display: inline-block;
+    margin: 0;
+    border: 1px solid #DDDDDD;
+    border-right: 0;
+    font-family: "Luckiest Guy";
+    vertical-align: middle; }
+  .product-view .add-to-cart .qty-wrapper .qty, .product-shop .add-to-cart .qty-wrapper .qty {
+    width: 60px !important;
+    height: 36px;
+    margin-left: -4px;
+    vertical-align: middle; }
+.product-view .link-compare, .product-shop .link-compare {
+  text-align: center; }
+  .product-view .link-compare .text, .product-shop .link-compare .text {
+    color: #ccc;
+    font-family: "Luckiest Guy";
+    font-size: 0.8em;
+    line-height: 100%; }
+  .product-view .link-compare .icon, .product-shop .link-compare .icon {
+    float: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 10%;
+    text-align: center;
+    margin: 0 auto !important;
+    background-position: -62px -12px;
+    background-color: #ccc; }
+  .product-view .link-compare:hover .text, .product-shop .link-compare:hover .text {
+    color: #2d2d2d;
+    transition: color 300ms ease-in-out, background-color 300ms ease-in-out; }
+  .product-view .link-compare:hover .icon, .product-shop .link-compare:hover .icon {
+    background-color: #fed530 !important;
+    background-position: -62px -12px; }
+.product-view .product-secondary-column .box-brand, .product-shop .product-secondary-column .box-brand {
+  padding-bottom: 10px; }
+  .product-view .product-secondary-column .box-brand a, .product-shop .product-secondary-column .box-brand a {
+    background-color: #f0f0f0;
+    padding: 0 10px; }
+.product-view .product-secondary-column .feature .feature-wrapper.top-border, .product-shop .product-secondary-column .feature .feature-wrapper.top-border {
+  border: none;
+  margin: 0;
+  padding: 0; }
+.product-view .product-secondary-column .feature .availability, .product-shop .product-secondary-column .feature .availability {
+  float: none;
+  padding-bottom: 18px;
+  vertical-align: middle;
+  line-height: normal;
+  color: #333333;
+  border-bottom: 1px solid #F5F5F5; }
+  .product-view .product-secondary-column .feature .availability:before, .product-shop .product-secondary-column .feature .availability:before {
+    padding: 4px;
+    content: "\f00c";
+    border-radius: 50%;
+    color: #fff;
+    font-family: FontAwesome;
+    font-size: 0.8em;
+    background-color: #de1d2e;
+    vertical-align: middle;
+    margin-right: 10px; }
+  .product-view .product-secondary-column .feature .availability span, .product-shop .product-secondary-column .feature .availability span {
+    display: block;
+    padding-left: 30px;
+    color: #57c831; }
+.product-view .product-secondary-column .feature .product-warranty, .product-shop .product-secondary-column .feature .product-warranty {
+  float: none;
+  vertical-align: middle;
+  line-height: normal;
+  padding-bottom: 18px;
+  color: #333333;
+  border-bottom: 1px solid #F5F5F5; }
+  .product-view .product-secondary-column .feature .product-warranty:before, .product-shop .product-secondary-column .feature .product-warranty:before {
+    display: block;
+    float: left;
+    content: "";
+    padding: 0 10px 0 0;
+    margin: 0;
+    width: 20px;
+    height: 30px;
+    background: url("/skin/frontend/ultimo/all4tradies/images/warranty-icon.png") no-repeat 0 3px;
+    background-size: 18px;
+    line-height: normal; }
+  .product-view .product-secondary-column .feature .product-warranty span, .product-shop .product-secondary-column .feature .product-warranty span {
+    display: block;
+    padding-left: 30px;
+    color: #57c831; }
+.product-view .product-secondary-column .feature .certification, .product-shop .product-secondary-column .feature .certification {
+  padding-top: 18px; }
+.product-view #product_addtocart_form, .product-shop #product_addtocart_form {
+  display: table;
+  height: 100%;
+  width: 100%; }
+  .product-view #product_addtocart_form .product-img-column, .product-shop #product_addtocart_form .product-img-column {
+    display: table-cell; }
+  .product-view #product_addtocart_form .product-shop, .product-shop #product_addtocart_form .product-shop {
+    display: table-cell; }
+  .product-view #product_addtocart_form .product-secondary-column, .product-shop #product_addtocart_form .product-secondary-column {
+    height: 100%;
+    display: table-cell; }
+    .product-view #product_addtocart_form .product-secondary-column .inner, .product-shop #product_addtocart_form .product-secondary-column .inner {
+      height: 91%; }
+.product-view .container2-wrapper, .product-shop .container2-wrapper {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0; }
+  .product-view .container2-wrapper .price-box, .product-shop .container2-wrapper .price-box {
+    padding-top: 0; }
+
+#product-tabs li a.current, #product-tabs li a:hover {
+  color: #de1d2e; }
+#product-tabs .tabs-panels {
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5; }
+  #product-tabs .tabs-panels .panel {
+    min-height: 223px;
+    padding: 5px 20px;
+    font-size: 1.1em; }
+
+.social li {
+  display: inline-block;
+  padding-right: 6px; }
+  .social li i {
+    border-radius: 50%;
+    color: #fff;
+    padding: 4px 4px 4px 4px;
+    width: 11px;
+    height: 11px;
+    font-size: 0.9em;
+    text-align: center;
+    background-color: #de1d2e;
+    font-style: normal; }
+.social p {
+  margin-bottom: 10px; }
+
+.addthis_toolbox a .icon {
+  margin-right: 20px; }
+  @media (min-width: 1281px) {
+    .addthis_toolbox a .icon {
+      margin-right: 5px; } }
+
+.tooltip {
+  cursor: pointer; }
+
+.footer-container {
+  margin-top: 20px; }
+  .footer-container .grid-full {
+    width: 100%;
+    margin-left: 0;
+    margin-righ: 0; }
+  .footer-container a {
+    color: #fff; }
+    .footer-container a:hover {
+      color: #fed530; }
+
+.footer-top-container {
+  background-color: #cc1e2d;
+  font-family: "Luckiest Guy" !important; }
+  .footer-top-container .section {
+    padding: 20px 0; }
+    .footer-top-container .section .copy h2 {
+      font-family: "Luckiest Guy" !important;
+      color: #fff;
+      margin: 10px 0 5px 0;
+      padding: 0;
+      font-size: 1.6rem;
+      font-weight: normal;
+      line-height: normal;
+      letter-spacing: 1px;
+      text-align: center; }
+      @media (min-width: 1281px) {
+        .footer-top-container .section .copy h2 {
+          margin-bottom: 0;
+          text-align: left; } }
+    .footer-top-container .section .copy.logged_in h2 {
+      font-size: 1.5em;
+      text-align: center; }
+      @media (min-width: 1281px) {
+        .footer-top-container .section .copy.logged_in h2 {
+          font-size: 2.2rem; } }
+    .footer-top-container .section .sign-up a {
+      display: block;
+      text-align: center;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 15px 0 8px 0;
+      background-color: #000;
+      color: #fff;
+      font-size: 1.8em;
+      letter-spacing: 1px; }
+      .footer-top-container .section .sign-up a.active, .footer-top-container .section .sign-up a:hover {
+        background-color: #fff;
+        color: #000;
+        transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+        -moz-transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+        -webkit-transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+        -o-transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out; }
+
+.footer-primary-container {
+  padding: 0 0 20px 0;
+  color: #fff;
+  background: black url("../images/slider-right.png") 0 0 repeat;
+  border-top: 2px solid #000; }
+  .footer-primary-container .footer-primary {
+    background-color: transparent; }
+    .footer-primary-container .footer-primary .links {
+      padding-top: 20px; }
+      .footer-primary-container .footer-primary .links .grid12-4 {
+        margin-left: 0; }
+      .footer-primary-container .footer-primary .links a {
+        color: #fff; }
+      .footer-primary-container .footer-primary .links img {
+        width: 60px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        vertical-align: middle; }
+        @media (min-width: 1281px) {
+          .footer-primary-container .footer-primary .links img {
+            display: inline-block; } }
+      .footer-primary-container .footer-primary .links h2 {
+        display: block;
+        padding: 12px 5px 0 5px;
+        vertical-align: middle;
+        font-family: Arial;
+        font-size: 18px;
+        text-align: center; }
+        @media (max-width: 961px) {
+          .footer-primary-container .footer-primary .links h2 {
+            font-size: 15px;
+            display: inline-block; } }
+        @media (min-width: 1281px) {
+          .footer-primary-container .footer-primary .links h2 {
+            display: inline-block;
+            text-align: left; } }
+      .footer-primary-container .footer-primary .links ul {
+        margin-bottom: 15px;
+        text-align: center;
+        min-height: auto; }
+        @media (min-width: 1281px) {
+          .footer-primary-container .footer-primary .links ul {
+            min-height: 220px; } }
+        .footer-primary-container .footer-primary .links ul li {
+          padding: 6px 0; }
+          .footer-primary-container .footer-primary .links ul li a {
+            font-weight: lighter; }
+            .footer-primary-container .footer-primary .links ul li a:hover {
+              color: #fed530;
+              text-decoration: none; }
+        @media (min-width: 1281px) {
+          .footer-primary-container .footer-primary .links ul {
+            text-align: left; } }
+      .footer-primary-container .footer-primary .links hr {
+        clear: both;
+        margin-top: 15px;
+        margin-bottom: 15px; }
+    .footer-primary-container .footer-primary .contacts {
+      font-family: "Luckiest Guy";
+      clear: both; }
+      .footer-primary-container .footer-primary .contacts #number {
+        margin-left: 0;
+        font-size: 1.5em; }
+      .footer-primary-container .footer-primary .contacts #email {
+        margin-left: 0;
+        font-size: 1.2em; }
+      .footer-primary-container .footer-primary .contacts hr {
+        margin-top: 30px; }
+      @media (max-width: 961px) {
+        .footer-primary-container .footer-primary .contacts {
+          border-top: 2px solid #E5EBEB;
+          margin-top: 20px;
+          padding-top: 10px; }
+          .footer-primary-container .footer-primary .contacts #email {
+            margin-left: 0; }
+          .footer-primary-container .footer-primary .contacts hr {
+            margin-left: 0;
+            margin-top: 50px; } }
+    .footer-primary-container .footer-primary .eway {
+      background: url("../images/footerribbon.png") right top no-repeat;
+      background-size: 100% 100%;
+      min-height: 335px; }
+      .footer-primary-container .footer-primary .eway #block_eway {
+        text-align: center;
+        color: #000; }
+        .footer-primary-container .footer-primary .eway #block_eway h3 {
+          margin: 8px;
+          font-family: Arial;
+          font-weight: bolder;
+          font-size: 1.3em;
+          line-height: 1.0em; }
+          @media (max-width: 961px) {
+            .footer-primary-container .footer-primary .eway #block_eway h3 {
+              font-size: 1.1em;
+              line-height: 0.9em; } }
+        .footer-primary-container .footer-primary .eway #block_eway p {
+          padding: 0 20px;
+          line-height: 12px;
+          font-size: 0.8em; }
+        .footer-primary-container .footer-primary .eway #block_eway #logo-eway {
+          margin-top: 5px;
+          width: 70%;
+          max-width: 140px; }
+        .footer-primary-container .footer-primary .eway #block_eway ul {
+          margin: 5px;
+          padding: 0 2px;
+          list-style: none; }
+          .footer-primary-container .footer-primary .eway #block_eway ul li {
+            display: inline; }
+            .footer-primary-container .footer-primary .eway #block_eway ul li img {
+              width: 48px;
+              height: 30px;
+              margin: 4px; }
+              @media (min-width: 961px) {
+                .footer-primary-container .footer-primary .eway #block_eway ul li img {
+                  margin: 3px; } }
+          @media (min-width: 1281px) {
+            .footer-primary-container .footer-primary .eway #block_eway ul li:nth-child(3):after {
+              content: "\A";
+              white-space: pre; } }
+
+.footer-bottom-container {
+  background-color: #000; }
+  .footer-bottom-container .item {
+    position: relative;
+    color: #fff; }
+    .footer-bottom-container .item .footer-copyright {
+      padding-top: 10px;
+      display: inline-block;
+      float: left; }
+      @media (max-width: 961px) {
+        .footer-bottom-container .item .footer-copyright {
+          float: none; } }
+    .footer-bottom-container .item .logo-smith-and-rowe {
+      display: block;
+      float: none;
+      margin: -2px auto;
+      width: 75px;
+      height: 30px; }
+      .footer-bottom-container .item .logo-smith-and-rowe a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url(../images/smith-and-rowe-web-dev-logo.png);
+        text-indent: -100000px;
+        background-size: 75px; }
+
+.promo-blocks {
+  margin-top: 10px; }
+  .promo-blocks .grid-container {
+    margin: 0 -1%; }
+    .promo-blocks .grid-container img {
+      width: 100%; }
+    .promo-blocks .grid-container div {
+      position: relative; }
+      .promo-blocks .grid-container div img + a {
+        border: none;
+        position: absolute;
+        display: inline-block;
+        background-color: #de1d2e;
+        color: #fed530;
+        padding: 4px 12px 0px 12px;
+        font-family: "Luckiest Guy";
+        font-size: 0.9em;
+        bottom: 3px;
+        left: 5px; }
+        @media (min-width: 961px) {
+          .promo-blocks .grid-container div img + a {
+            bottom: 5px;
+            left: 8px;
+            font-size: 1.5em;
+            padding: 10px 20px 5px 20px; } }
+        .promo-blocks .grid-container div img + a:hover {
+          background-color: #fed530;
+          color: #2d2d2d; }
+  .promo-blocks ul {
+    overflow: hidden;
+    text-align: center;
+    display: block;
+    float: left;
+    width: 100%; }
+    .promo-blocks ul li {
+      display: inline-block;
+      width: 23%;
+      margin: 20px 1%; }
+      .promo-blocks ul li.first {
+        float: left;
+        margin-left: 0;
+        margin-right: 0; }
+      .promo-blocks ul li.last {
+        float: right;
+        margin-left: 0;
+        margin-right: 0; }
+
+.new-products-header {
+  padding: 15px 0 10px 0;
+  text-align: center;
+  background-color: #de1d2e;
+  color: #fed530;
+  overflow: hidden;
+  margin-bottom: 12px; }
+  .new-products-header h3 {
+    margin: 0;
+    font-size: 2.2em; }
+  .new-products-header:hover {
+    color: white;
+    background-color: #2d2d2d; }
+
+.products-grid .price-box {
+  background-color: #fed530;
+  margin: 0;
+  padding: 10px 10px 5px 10px;
+  position: static; }
+.products-grid .price {
+  font-size: 2em;
+  font-family: "Luckiest Guy"; }
+  .products-grid .price .price-from {
+    text-transform: uppercase;
+    font-size: 0.8em; }
+  .products-grid .price .gst, .products-grid .price .gst-txt {
+    font-size: 12px;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif; }
+.products-grid .bulk-discounts-apply {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  width: 100%; }
+  .products-grid .bulk-discounts-apply span {
+    background-color: #fed530;
+    margin: 0 11px;
+    display: block; }
+
+.special-price .price-label {
+  font-family: "Luckiest Guy";
+  text-transform: uppercase;
+  font-size: 1.5em; }
+
+.sticker-wrapper {
+  display: none; }
+
+.products-grid {
+  position: relative; }
+  .products-grid .product-name a {
+    font-family: Arial, Helvetica, sans-serif; }
+    .products-grid .product-name a p {
+      font-family: "Luckiest Guy";
+      margin-bottom: 5px;
+      display: block;
+      color: #de1d2e;
+      font-size: 1.2em; }
+    .products-grid .product-name a span {
+      text-transform: none; }
+    .products-grid .product-name a:hover {
+      color: #2d2d2d; }
+  .products-grid .display-onhover .button {
+    width: 100% !important; }
+    .products-grid .display-onhover .button span {
+      font-family: "Luckiest Guy";
+      font-size: 1em;
+      width: 100% !important;
+      background-color: #333333 !important;
+      border-bottom: 2px solid #de1d2e;
+      color: white;
+      margin: 0 auto; }
+      .products-grid .display-onhover .button span span {
+        padding: 9px 0 2px 0  !important;
+        margin: 0;
+        font-size: 1.3em !important; }
+        .products-grid .display-onhover .button span span i {
+          margin-right: 10px; }
+      .products-grid .display-onhover .button span:hover {
+        background-color: #fed530 !important;
+        color: #333333; }
+  .products-grid .display-onhover .link-compare {
+    background-color: none;
+    display: inline-block;
+    width: 70% !important;
+    padding: 12px 0 8px 0  !important;
+    margin: 0 !important;
+    font-size: 1.3em !important;
+    color: #c1c1c1; }
+    .products-grid .display-onhover .link-compare i {
+      font-style: normal;
+      line-height: 0;
+      padding: 0;
+      margin: 0;
+      color: white; }
+    .products-grid .display-onhover .link-compare span.icon {
+      border-radius: 0;
+      margin-left: 7px !important;
+      background-color: #c1c1c1; }
+    .products-grid .display-onhover .link-compare:hover, .products-grid .display-onhover .link-compare:active, .products-grid .display-onhover .link-compare:focus {
+      color: #de1d2e; }
+      .products-grid .display-onhover .link-compare:hover span.icon, .products-grid .display-onhover .link-compare:active span.icon, .products-grid .display-onhover .link-compare:focus span.icon {
+        background-color: #de1d2e; }
+  @media (min-width: 1281px) {
+    .products-grid .display-onhover .button {
+      width: 100% !important; }
+      .products-grid .display-onhover .button span span {
+        font-size: 1.5em !important; } }
+  .products-grid .item:hover .bulk-discounts-apply span {
+    margin: 0 23px; }
+
+.products-list {
+  /*
+  .bulk-discounts-apply {
+      position: absolute;
+
+      display: none;
+      width: 27.33% !important;
+      max-width: 265px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      background-color: $yellow;
+      text-align: center;
+      padding: 3px 0;
+
+  }
+
+  .item {
+
+    &:hover {
+      .bulk-discounts-apply {
+        display: block;
+        position: absolute;
+        top: 28px;
+        left: 28px;
+      }
+    }
+  }
+  */ }
+  .products-list .product-name a {
+    font-family: Arial, Helvetica, sans-serif; }
+    .products-list .product-name a p {
+      font-family: "Luckiest Guy";
+      margin-bottom: 5px;
+      display: block;
+      color: #de1d2e;
+      font-size: 1.2em; }
+    .products-list .product-name a span {
+      text-transform: none; }
+    .products-list .product-name a:hover {
+      color: #2d2d2d; }
+  .products-list .right-column p {
+    text-align: center; }
+  .products-list .button {
+    width: 100% !important;
+    max-width: 200px;
+    margin: 0 auto; }
+    .products-list .button span {
+      font-family: "Luckiest Guy";
+      font-size: 1.35em;
+      width: 100% !important;
+      background-color: #333333 !important;
+      border-bottom: 2px solid #de1d2e;
+      color: white;
+      margin: 0 auto; }
+      .products-list .button span span {
+        padding: 3px 0 2px 0  !important;
+        margin: 0;
+        font-size: 1.1em !important;
+        height: 40px; }
+        .products-list .button span span i {
+          margin-right: 10px; }
+      .products-list .button span:hover {
+        background-color: #fed530 !important;
+        color: #333333; }
+  .products-list .add-to-links {
+    width: 100%; }
+    .products-list .add-to-links li {
+      width: 100%;
+      margin-right: 0;
+      text-align: center; }
+  .products-list .link-compare {
+    background-color: none;
+    display: inline-block;
+    width: 110px !important;
+    padding: 5px 0 8px 0  !important;
+    margin: 0 !important;
+    font-size: 1.3em !important;
+    text-align: center;
+    color: #aaaaaa; }
+    .products-list .link-compare i {
+      font-style: normal;
+      line-height: 0;
+      padding: 0;
+      margin: 0;
+      color: white; }
+    .products-list .link-compare span.icon {
+      border-radius: 0;
+      margin-left: 7px !important;
+      background-color: #c1c1c1; }
+    .products-list .link-compare:hover, .products-list .link-compare:active, .products-list .link-compare:focus {
+      color: #de1d2e; }
+      .products-list .link-compare:hover span.icon, .products-list .link-compare:active span.icon, .products-list .link-compare:focus span.icon {
+        background-color: #fed530; }
+  .products-list .price-box {
+    border-top-style: none !important;
+    border-top-width: 0; }
+    .products-list .price-box .price {
+      font-family: "Luckiest Guy";
+      color: #de1d2e;
+      font-size: 1.8rem !important;
+      line-height: 2.25em; }
+      .products-list .price-box .price .price-from {
+        display: none; }
+    .products-list .price-box br {
+      display: none; }
+    .products-list .price-box .gst-txt {
+      font-family: Arial;
+      font-size: 0.8rem;
+      color: #AAA; }
+    .products-list .price-box .regular-price .price {
+      font-size: 1.5em; }
+  .products-list .link-learn {
+    display: none; }
+  .products-list .bulk-discounts-apply {
+    display: block;
+    width: 100% !important;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: #fed530;
+    text-align: center;
+    padding: 3px 0; }
+
+h1, h2, h3, h4, h5, .block-title, .sign-up, .tabs li a {
+  font-family: "Luckiest Guy";
+  text-transform: uppercase !important; }
+
+.std h3 {
+  margin-left: 10px; }
+
+.section-title, .company-info h3, .std h3 {
+  font-size: 2em; }
+
+#cboxContent {
+  background: #2d2d2d !important;
+  color: white !important; }
+
+#cboxTitle {
+  color: white !important; }
+
+#cboxCurrent {
+  color: white !important; }
+
+#cboxPrevious:hover, #cboxNext:hover, #cboxClose:hover, .owl-prev:hover, .owl-next:hover {
+  background-color: #de1d2e !important; }
+
+.checkout-cart-index h2.product-name {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: none; }
+  .checkout-cart-index h2.product-name a {
+    font-size: 0.8em; }
+.checkout-cart-index .qty {
+  min-width: 80px; }
+
+#mini-cart .dropdown-menu .btn-edit {
+  margin-left: 15px; }
+
+.account-create .page-title {
+  padding: 0px;
+  margin-bottom: 5px; }
+.account-create .fieldset {
+  padding: 0px; }
+  .account-create .fieldset .legend {
+    margin: 0;
+    padding: 0; }
+@media (max-width: 961px) {
+  .account-create .field {
+    width: 100% !important; }
+  .account-create input {
+    width: 100% !important; } }
+@media (min-width: 1281px) {
+  .account-create .page-title {
+    padding: 0 0 0 65px; }
+  .account-create .fieldset {
+    padding: 0 0 0 65px; } }
+.account-create ul {
+  margin: 20px 0; }
+  .account-create ul li {
+    padding-left: 0px; }
+.account-create h1 {
+  color: #de1d2e;
+  margin-bottom: 0; }
+.account-create h2 {
+  margin-right: 60px !important; }
+.account-create .buttons-set {
+  padding: 20px 10px 0 0;
+  margin: 0;
+  text-align: center; }
+  .account-create .buttons-set button {
+    float: none;
+    padding-bottom: 0 !important; }
+    .account-create .buttons-set button span {
+      height: 40px;
+      padding-top: 0px;
+      background-color: #de1d2e;
+      color: white;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      font-family: "Luckiest Guy";
+      padding-bottom: 0 !important;
+      text-transform: uppercase; }
+      .account-create .buttons-set button span:hover {
+        background-color: #fed530;
+        color: #2d2d2d; }
+  @media (min-width: 1281px) {
+    .account-create .buttons-set {
+      padding-top: 20px; }
+      .account-create .buttons-set button {
+        float: right; } }
+.account-create .grid12-4 {
+  float: right !important; }
+
+#sociallogin_button {
+  float: right;
+  width: 100%;
+  padding-left: 0px; }
+  @media (min-width: 1281px) {
+    #sociallogin_button {
+      padding-left: 20px;
+      border-left: 1px solid #f2f2f2;
+      width: 70%; } }
+  #sociallogin_button ul {
+    background-color: #F2F2F2;
+    padding: 20px 20px 20px 10px;
+    float: none !important; }
+    #sociallogin_button ul li {
+      text-align: center;
+      color: #de1d2e;
+      width: 100%;
+      float: none !important;
+      margin: 0 auto;
+      margin-bottom: 20px; }
+      #sociallogin_button ul li button {
+        cursor: pointer;
+        width: 100%; }
+
+#bt-loginfb {
+  background-color: #3b5998;
+  padding: 12px 6px 7px 8px;
+  border: none;
+  color: #fff;
+  text-align: left !important; }
+  #bt-loginfb > span {
+    margin-top: -2px;
+    border-left: 1px solid #fff; }
+  #bt-loginfb span {
+    font-family: "Luckiest Guy";
+    font-size: 1.2em;
+    display: inline-block;
+    padding-top: 3px;
+    padding-left: 3px;
+    text-transform: uppercase; }
+    @media (min-width: 961px) {
+      #bt-loginfb span {
+        font-size: 1.2rem; } }
+  #bt-loginfb:before {
+    margin-top: -2px;
+    float: left;
+    padding: 4px 4px 5px 4px;
+    content: "\f09a";
+    border-radius: 20%;
+    color: #3b5998;
+    font-family: FontAwesome;
+    font-size: 1em;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 8px;
+    text-align: center; }
+
+#bt-logintw {
+  background-color: #55acee;
+  padding: 12px 6px 7px 8px;
+  border: none;
+  color: #fff;
+  text-align: left !important; }
+  #bt-logintw > span {
+    margin-top: -2px;
+    border-left: 1px solid #fff; }
+  #bt-logintw span {
+    font-family: "Luckiest Guy";
+    font-size: 1.2em;
+    display: inline-block;
+    padding-top: 3px;
+    padding-left: 3px;
+    text-transform: uppercase; }
+    @media (min-width: 961px) {
+      #bt-logintw span {
+        font-size: 1.2rem; } }
+  #bt-logintw:before {
+    margin-top: -2px;
+    float: left;
+    padding: 4px 4px 5px 4px;
+    content: "\f099";
+    border-radius: 20%;
+    color: #55acee;
+    font-family: FontAwesome;
+    font-size: 1em;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 8px;
+    text-align: center; }
+
+#bt-logingo {
+  background-color: #d73d32;
+  padding: 12px 6px 7px 8px;
+  border: none;
+  color: #fff;
+  text-align: left !important; }
+  #bt-logingo > span {
+    margin-top: -2px;
+    border-left: 1px solid #fff; }
+  #bt-logingo span {
+    font-family: "Luckiest Guy";
+    font-size: 1.2em;
+    display: inline-block;
+    padding-top: 3px;
+    padding-left: 3px;
+    text-transform: uppercase; }
+    @media (min-width: 961px) {
+      #bt-logingo span {
+        font-size: 1.2rem; } }
+  #bt-logingo:before {
+    margin-top: -2px;
+    float: left;
+    padding: 4px 4px 5px 4px;
+    content: "\f0d5";
+    border-radius: 20%;
+    color: #d73d32;
+    font-family: FontAwesome;
+    font-size: 1em;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 8px;
+    text-align: center; }
+
+#bt-loginlinked {
+  background-color: #1c86bd;
+  padding: 12px 6px 7px 8px;
+  border: none;
+  color: #fff;
+  text-align: left !important; }
+  #bt-loginlinked > span {
+    margin-top: -2px;
+    border-left: 1px solid #fff; }
+  #bt-loginlinked span {
+    font-family: "Luckiest Guy";
+    font-size: 1.2em;
+    display: inline-block;
+    padding-top: 3px;
+    padding-left: 3px;
+    text-transform: uppercase; }
+    @media (min-width: 961px) {
+      #bt-loginlinked span {
+        font-size: 1.2rem; } }
+  #bt-loginlinked:before {
+    margin-top: -2px;
+    float: left;
+    padding: 4px 4px 5px 4px;
+    content: "\f0e1";
+    border-radius: 20%;
+    color: #1c86bd;
+    font-family: FontAwesome;
+    font-size: 1em;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 8px;
+    text-align: center; }
+
+.block-brands h3 {
+  padding: 10px 0 5px 0 !important;
+  margin: 0 !important;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 2em; }
+.block-brands .itemslider-wrapper, .block-brands .company-info-content {
+  padding-top: 15px; }
+.block-brands .social {
+  padding-top: 15px;
+  border-top: 1px solid #E5E5E5; }
+  .block-brands .social .text {
+    font-family: "Luckiest Guy";
+    font-size: 1.1em;
+    color: #de1d2e; }
+
+.phone-text-with-icon {
+  float: none;
+  padding-bottom: 10px !important;
+  vertical-align: middle;
+  line-height: normal;
+  color: #333333; }
+  .phone-text-with-icon:before {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    padding: 4px 4px 4px 4px;
+    content: "\f10b";
+    border-radius: 50%;
+    color: #fff;
+    font-family: FontAwesome;
+    font-size: 1.9em;
+    background-color: #de1d2e;
+    vertical-align: middle;
+    text-align: center;
+    margin-right: 10px; }
+  .phone-text-with-icon span {
+    display: block;
+    padding-left: 30px;
+    color: #57c831; }
+
+.email-text-with-icon {
+  clear: both;
+  float: none;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  vertical-align: middle;
+  line-height: normal;
+  color: #333333; }
+  .email-text-with-icon:before {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    padding: 8px 4px 0px 4px;
+    content: "\f0e0";
+    border-radius: 50%;
+    color: #fff;
+    font-family: FontAwesome;
+    font-size: 1.3em;
+    background-color: #de1d2e;
+    vertical-align: middle;
+    text-align: center;
+    margin-right: 10px; }
+  .email-text-with-icon span {
+    display: block;
+    padding-left: 30px;
+    color: #57c831; }
+
+#contactForm {
+  padding: 0 20px; }
+  #contactForm .fieldset {
+    padding: 0; }
+  #contactForm .buttons-set {
+    margin: 0; }
+    #contactForm .buttons-set button {
+      float: none !important;
+      padding-bottom: 0 !important; }
+      #contactForm .buttons-set button span span {
+        padding: 0 30px;
+        height: 40px;
+        background-color: #de1d2e;
+        color: white;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        font-family: "Luckiest Guy";
+        padding-bottom: 0 !important;
+        text-transform: uppercase; }
+        #contactForm .buttons-set button span span:hover {
+          background-color: #fed530;
+          color: #2d2d2d; }
+    @media (min-width: 1281px) {
+      #contactForm .buttons-set {
+        padding-top: 20px; }
+        #contactForm .buttons-set button {
+          float: right; } }
+    #contactForm .buttons-set p {
+      text-align: left !important; }
+
+.std h3 {
+  margin-top: 20px; }
+
+.cms-page-view .main, .CHA .main {
+  padding-top: 10px; }
+  .cms-page-view .main .col-main, .CHA .main .col-main {
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%; }
+    .cms-page-view .main .col-main .page-title h1, .CHA .main .col-main .page-title h1 {
+      color: #de1d2e; }
+
+.col-main .page-title h1 {
+  color: #de1d2e; }
+.col-main h3 {
+  margin: 30px 0 2px 0; }
+
+.cms-background-container {
+  margin-top: -22px;
+  margin-bottom: 20px;
+  display: none;
+  overflow: hidden; }
+  .cms-background-container ul li.right {
+    display: none; }
+    .cms-background-container ul li.right img {
+      width: 100%; }
+  .cms-background-container img {
+    display: inline-block;
+    width: auto; }
+  @media (min-width: 961px) {
+    .cms-background-container {
+      display: block; }
+      .cms-background-container ul li.left {
+        width: 100%; }
+        .cms-background-container ul li.left img {
+          width: 100%; } }
+  @media (min-width: 1281px) {
+    .cms-background-container {
+      height: 304px; }
+      .cms-background-container ul li.left {
+        width: 872px; }
+      .cms-background-container ul li.right {
+        display: inline-block;
+        width: 304px; } }
+
+.cms-supplier-enquiry-html ul {
+  list-style: none; }
+  .cms-supplier-enquiry-html ul li {
+    padding-left: 0px; }
+.cms-supplier-enquiry-html blockquote {
+  margin: 10px 0; }
+  .cms-supplier-enquiry-html blockquote ul {
+    list-style: disc; }
+
+.cms-new-html .page-title {
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center; }
+.cms-new-html .price-toolbar {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center; }
+@media (min-width: 961px) {
+  .cms-new-html .page-title {
+    margin-bottom: 0;
+    text-align: left; }
+  .cms-new-html .price-toolbar {
+    margin-top: -40px;
+    text-align: right; } }
+@media (min-width: 1281px) {
+  .cms-new-html .page-title {
+    margin-bottom: 0; }
+  .cms-new-html .price-toolbar {
+    margin-top: -30px; }
+  .cms-new-html .std {
+    margin-top: -10px; } }
+
+.cms-brands-html .brands-grid {
+  text-align: center; }
+  .cms-brands-html .brands-grid .brand-element img {
+    width: 75%;
+    height: auto;
+    max-width: 75%; }
+
+.advanced-search-summary img, .advanced-search-summary .search-criteria, .advanced-search-summary .brand-description {
+  display: block; }
+.advanced-search-summary ul {
+  width: 100%; }
+
+.toolbar .pager {
+  display: none; }
+
+.toolbar-bottom .pager {
+  display: block; }
+
+.cms-page-view table {
+  border-collapse: collapse;
+  text-align: left;
+  width: auto;
+  margin: 10px 0;
+  max-width: 90%; }
+.cms-page-view table {
+  font: normal 12px/150% Arial, Helvetica, sans-serif;
+  background: #fff;
+  border: 1px solid #333333; }
+.cms-page-view table td, .cms-page-view .datagrid table th {
+  padding: 6px 10px; }
+.cms-page-view table thead th {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #333333), color-stop(1, #333333));
+  background: -moz-linear-gradient(center top, #333333 5%, #333333 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#333333');
+  background-color: #333333;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  border-left: 1px solid #333333;
+  padding: 5px; }
+.cms-page-view table thead th:first-child {
+  border: none; }
+.cms-page-view table tbody td {
+  color: #333333;
+  border-left: 1px solid #F2F2F2;
+  font-size: 14px;
+  font-weight: normal; }
+.cms-page-view tbody tr:nth-child(odd) {
+  background-color: #F2F2F2; }
+.cms-page-view table tbody .alt td {
+  background: #F2F2F2;
+  color: #333333; }
+.cms-page-view table tbody td:first-child {
+  border-left: none; }
+.cms-page-view table tbody tr:last-child td {
+  border-bottom: none; }
+.cms-page-view caption {
+  margin: 20px 0;
+  font-size: 2em;
+  font-family: "Luckiest Guy";
+  text-transform: uppercase; }
+
+.datagrid table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%; }
+
+.datagrid {
+  font: normal 12px/150% Arial, Helvetica, sans-serif;
+  background: #fff;
+  overflow: hidden;
+  border: 1px solid #333333; }
+
+.datagrid table td, .datagrid table th {
+  padding: 6px 10px; }
+
+.datagrid table thead th {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #333333), color-stop(1, #333333));
+  background: -moz-linear-gradient(center top, #333333 5%, #333333 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#333333');
+  background-color: #333333;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  border-left: 1px solid #333333; }
+
+.datagrid table thead th:first-child {
+  border: none; }
+
+.datagrid table tbody td {
+  color: #333333;
+  border-left: 1px solid #F2F2F2;
+  font-size: 14px;
+  font-weight: normal; }
+
+.datagrid table tbody .alt td {
+  background: #F2F2F2;
+  color: #333333; }
+
+.datagrid table tbody td:first-child {
+  border-left: none; }
+
+.datagrid table tbody tr:last-child td {
+  border-bottom: none; }
+
+.toolbar .pager {
+  display: none; }
+
+.toolbar-bottom .pager {
+  display: block; }
+
+#all4workwear .table {
+  margin: 20px 0; }
+
+.simple_contact .fieldset {
+  width: 100%;
+  padding: 0; }
+  @media (min-width: 1281px) {
+    .simple_contact .fieldset {
+      width: 50%; } }
+  .simple_contact .fieldset br {
+    clear: both; }
+  .simple_contact .fieldset textarea {
+    width: 260px; }
+.simple_contact .buttons-set {
+  margin: 0; }
+  .simple_contact .buttons-set button {
+    text-transform: uppercase;
+    float: none !important;
+    padding-bottom: 0 !important; }
+    .simple_contact .buttons-set button span {
+      padding: 15px 30px;
+      height: 25px;
+      background-color: #de1d2e;
+      color: white;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      font-family: "Luckiest Guy";
+      padding-bottom: 0 !important; }
+      .simple_contact .buttons-set button span:hover {
+        background-color: #fed530;
+        color: #2d2d2d; }
+  @media (min-width: 1281px) {
+    .simple_contact .buttons-set {
+      padding-top: 20px; }
+      .simple_contact .buttons-set button {
+        float: right; } }
+
+.solrsearch-index-index .page-title h1 {
+  font-size: 1.6em !important; }
+.solrsearch-index-index #solr_search_facets li a.facet-item {
+  font-size: 100%;
+  color: #333; }
+.solrsearch-index-index #solr_search_facets #solr_search_manufacturer_facet_expander {
+  padding-top: 20px; }
+.solrsearch-index-index #solr_search_facets #content_holder_manufacturer_facet {
+  paddint-top: 0; }
+
+.my-account .dashboard .box-info .col2-set {
+  margin-bottom: 30px; }

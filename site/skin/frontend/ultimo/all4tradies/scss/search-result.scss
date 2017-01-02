@@ -1,0 +1,22 @@
+.solrsearch-index-index {
+  .page-title {
+    h1 {
+      font-size: 1.6em !important;
+    }
+  }
+  #solr_search_facets {
+    li a.facet-item {
+      font-size: 100%;
+      color: #333;
+    }
+    #solr_search_manufacturer_facet_expander {
+      padding-top: 20px;
+    }
+
+    #content_holder_manufacturer_facet {
+      paddint-top: 0;
+    }
+  }
+
+}
+

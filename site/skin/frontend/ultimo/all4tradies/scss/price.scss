@@ -1,0 +1,47 @@
+.products-grid {
+  .price-box {
+    background-color: $yellow;
+    margin: 0;
+    padding: 10px 10px 5px 10px;
+    position: static;
+  }
+
+  .price {
+    font-size: 2em;
+    font-family: $main-font;
+    .price-from {
+      text-transform: uppercase;
+      font-size: 0.8em;
+    }
+    .gst, .gst-txt {
+      font-size: 12px;
+      display: block;
+      font-family: $font-default;
+
+    }
+
+  }
+  .bulk-discounts-apply {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 100%;
+    span {
+      background-color: $yellow;
+      margin: 0 11px;
+      display: block;
+    }
+  }
+}
+.special-price {
+  .price-label {
+    font-family: $main-font;
+    text-transform: uppercase;
+    font-size: 1.5em;
+  }
+}
+
+.sticker-wrapper {
+  display: none;
+}
+

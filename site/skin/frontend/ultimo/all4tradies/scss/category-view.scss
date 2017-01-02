@@ -1,0 +1,75 @@
+.category-title {
+  h1 {
+    float: left;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.catalog-category-block {
+  display: block;
+  margin: 0 0 20px 0;
+}
+
+.price-toolbar {
+  display: block;
+  float: right;
+  font-family: "Luckiest Guy", georgia, serif;
+  margin-top: 25px;
+  margin-right:10px;
+
+  @media (max-width: $tablet) {
+    clear: both;
+    display: block;
+    float:none;
+    margin-bottom: 10px;
+  }
+  span {
+    font-size:16px;
+    text-transform: uppercase;
+    padding-right: 6px;
+  }
+
+  a {
+    display: inline-block;
+    text-align: left;
+    padding:6px 6px 4px 6px;
+    line-height: normal;
+    border: 2px solid #75767C;
+    background-color: #CECCCD;
+    font-size: 15px;
+    font-weight: normal;
+
+    &.active, &:hover {
+      background-color: $green;
+      color: #fff;
+      transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+      -moz-transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+      -webkit-transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+      -o-transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+    }
+
+    &.ex-gst {
+      margin-left: -5px;
+    }
+
+    .fa-check {
+      font-size:13px;
+      color: #fff;
+      margin: 0 0 0 3px;
+      padding: 0;
+    }
+  }
+}
+
+.featured-product-title { float: left; }
+.catalogsearch-result-index {
+  .col-main {
+    .page-title {
+      h1 {
+        font-size: 1.6em !important;
+      }
+    }
+  }
+}

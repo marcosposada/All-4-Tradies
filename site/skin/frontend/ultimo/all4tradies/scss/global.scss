@@ -1,0 +1,146 @@
+/**
+ * This file is a container for custom CSS. You can use it to override the default styles of the theme.
+ *
+ * 1. Copy the file "SAMPLE.custom.css" and rename it to "custom.css".
+ *    Otherwise this file will not be loded by Magento.
+ * 2. Enable it in the admin panel.
+ * 3. Uncomment slected sample styles or add your own CSS to override the default styles of the theme.
+ *
+ * Please refer to the user guide for more details.
+ *
+ */
+
+
+/* Products
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* Product labels
+-------------------------------------------------------------- */
+/*
+.sticker.new {
+	background-color:#555;
+	color:#fff;
+}
+.sticker.sale {
+	background-color:orange;
+	color:#fff;
+}
+*/
+
+/* Stock indicator on product page (configurable products):
+icon background color
+-------------------------------------------------------------- */
+/*
+a.availability-only span.icon { background-color:orange; }
+*/
+
+
+/* Miscellaneous
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* Number of products in category (sidebar menu) */
+/*
+.vertnav .number { color: #000; }
+*/
+
+/* Drop-down caret */
+/*
+.caret {
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+*/
+
+// Font-Awesome
+
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+$tablet: 961px;
+$tablet-min: 768px;
+$desktop: 1281px;
+$red: #DE1D2E;
+$yellow: #fed530;
+$green: #57C831;
+$main-font: 'Luckiest Guy';
+$font-default: Arial, Helvetica, sans-serif;
+$black: #2D2D2D;
+$btn-gray: #eeeeee;
+$brands-block-bg: #F0F0F0;
+$brands-block-hover: #C1C1C1;
+$footer-top-bg: #CC1E2D;
+$border-color: #E1E1E1;
+$btn-hover-text-color: #333333;
+
+
+.main {
+  padding-top: 0px;
+}
+
+@mixin social-button($color, $icon) {
+  background-color: $color;
+  padding: 12px 6px 7px 8px;
+  border: none;
+  color: #fff;
+  text-align: left !important;
+  > span {
+    margin-top: -2px;
+    border-left: 1px solid #fff;
+  }
+  span {
+    font-family: $main-font;
+    font-size: 1.2em;
+    display: inline-block;
+    padding-top: 3px;
+    padding-left: 3px;
+    @media (min-width: $tablet) {
+      font-size: 1.2rem;
+    }
+    text-transform: uppercase;
+  }
+  &:before {
+    margin-top: -2px;
+    float: left;
+    padding: 4px 4px 5px 4px;
+    content: $icon;
+    border-radius: 20%;
+    color: $color;
+    font-family: FontAwesome;
+    font-size: 1em;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 8px;
+    text-align: center;
+  }
+}
+
+@import "header";
+@import "menu";
+@import "slider";
+@import "products";
+@import "category-view";
+@import "product-view";
+@import "footer";
+@import "promo-blocks";
+@import "price";
+@import "products-grid";
+@import "products-list";
+@import "font";
+@import "modal";
+@import "cart";
+@import "register";
+@import "brands";
+@import "contact";
+@import "content";
+@import "cms";
+@import "advanced-search";
+@import "pager";
+@import "tables";
+@import "pager";
+@import "sizing-guide";
+@import "feedback";
+@import "search-result";
+@import "account";

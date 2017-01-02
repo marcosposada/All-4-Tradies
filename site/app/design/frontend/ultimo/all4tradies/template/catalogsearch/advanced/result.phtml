@@ -1,0 +1,116 @@
+<?php
+    /**
+     * Magento
+     *
+     * NOTICE OF LICENSE
+     *
+     * This source file is subject to the Academic Free License (AFL 3.0)
+     * that is bundled with this package in the file LICENSE_AFL.txt.
+     * It is also available through the world-wide-web at this URL:
+     * http://opensource.org/licenses/afl-3.0.php
+     * If you did not receive a copy of the license and are unable to
+     * obtain it through the world-wide-web, please send an email
+     * to license@magentocommerce.com so we can send you a copy immediately.
+     *
+     * DISCLAIMER
+     *
+     * Do not edit or add to this file if you wish to upgrade Magento to newer
+     * versions in the future. If you wish to customize Magento for your
+     * needs please refer to http://www.magentocommerce.com for more information.
+     *
+     * @category    design
+     * @package     base_default
+     * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+     * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+     */
+?>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<?php
+    $resource = Mage::getSingleton('core/resource');
+    $brand_image;
+    $brand_description;
+    /**
+     * Retrieve the read connection
+     *
+     */
+    if ($productId = $this->getRequest()->getParam('manufacturer')) :
+        $manfacturer = $productId[0];
+        $readConnection = $resource->getConnection('core_read');
+        $query = 'SELECT * from all4aitmanufacturers WHERE `manufacturer_id`=' . $manfacturer . ' LIMIT 1';
+        $results = $readConnection->fetchAll($query);
+        if ($results) :
+            $title = $results[0]['title'];
+            $x1d = preg_replace('#[^0-9a-z]+#i', $title, '_');
+            $x1d = str_replace(" ", "_", $x1d);
+            $x1d = strtolower($x1d);
+            $x1d = trim($x1d);
+            $brand_image = '<img src="/media/wysiwyg/infortis/brands/' . $x1d . '.png" />';
+            $brand_description = $results[0]['content'];
+        else:
+            $productModel = Mage::getModel('catalog/product');
+            $attr = $productModel->getResource()->getAttribute("manufacturer");
+            if ($attr->usesSource()) {
+                $title = $attr->getSource()->getOptionText($manfacturer);
+                $x1d = preg_replace('#[^0-9a-z]+#i', $title, '_');
+                $x1d = str_replace(" ", "_", $x1d);
+                $x1d = strtolower($x1d);
+                $x1d = trim($x1d);
+                $mediaBase = Mage::getBaseDir('media');
+                if (file_exists($mediaBase.'/wysiwyg/infortis/brands/' . $x1d . '.png')) {
+                    $brand_image = '<img src="/media/wysiwyg/infortis/brands/' . $x1d . '.png" />';
+                }
+            }
+
+        endif;
+    endif;
+?>
+<?php if (!$brand_image) : ?>
+<div class="page-title">
+    <h1><?php echo $this->__('Catalog Advanced Search') ?></h1>
+</div>
+
+    <?php if ($this->getResultCount()): ?>
+        <div class="brand-result">
+            <p class="advanced-search-amount">
+                <?php echo $this->helper('catalogsearch')->__('<strong>%d item(s)</strong> were found using the following search criteria', $this->getResultCount()); ?>
+            </p>
+        </div>
+    <?php else: ?>
+        <p class="error-msg"><?php echo $this->helper('catalogsearch')->__('No items were found using the following search criteria.'); ?>
+            <a href="<?php echo $this->getFormUrl(); ?>"><?php echo $this->helper('catalogsearch')->__('Modify your search'); ?></a>
+        </p>
+    <?php endif; ?>
+<?php endif; ?>
+
+<div class="advanced-search-summary">
+    <?php $searchCriterias = $this->getSearchCriterias(); ?>
+    <?php foreach (array('left', 'right') as $side): ?>
+        <?php if (@$searchCriterias[$side]): ?>
+            <ul>
+                <?php foreach ($searchCriterias[$side] as $criteria): ?>
+                    <li>
+
+                        <?php if ($brand_image) : ?>
+                            <?php echo $brand_image; ?>
+                        <?php endif; ?>
+                        <p class="search-criteria"><strong><?php echo $this->escapeHtml($this->helper('catalog')->__($criteria['name'])); ?>:</strong><?php echo $this->escapeHtml($criteria['value']); ?></p>
+                        <?php if ($brand_description) : ?>
+                            <p><?php echo $brand_description; ?></p>
+                        <?php endif; ?>
+
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
+    <?php endforeach; ?>
+    <?php if ($this->getResultCount() && (!$brand_description || !$brand_description)): ?>
+        <p>
+            <?php echo $this->helper('catalogsearch')->__("Don't see what you're looking for?"); ?>
+            <a href="<?php echo $this->getFormUrl(); ?>"><?php echo $this->helper('catalogsearch')->__('Modify your search'); ?></a>
+        </p>
+    <?php endif; ?>
+</div>
+<?php if ($this->getResultCount()): ?>
+    <?php echo $this->getProductListHtml() ?>
+<?php endif; ?>
+<?php $this->getSearchCriterias(); ?>

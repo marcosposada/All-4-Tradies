@@ -1,0 +1,20 @@
+.checkout-cart-index {
+  h2.product-name {
+    font-family: $font-default;
+    text-transform: none;
+    a {
+      font-size: 0.8em;
+    }
+  }
+  .qty {
+    min-width: 80px;
+  }
+}
+
+#mini-cart {
+  .dropdown-menu {
+    .btn-edit {
+      margin-left: 15px;
+    }
+  }
+}

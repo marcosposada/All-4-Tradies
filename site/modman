@@ -1,0 +1,21 @@
+app/code/local/MageB2B/Sublogin app/code/local/MageB2B/Sublogin
+app/design/adminhtml/default/default/template/sublogin app/design/adminhtml/default/default/template/sublogin
+app/etc/modules/MageB2B_Sublogin.xml app/etc/modules/MageB2B_Sublogin.xml
+app/locale/de_DE/template/email/account_password_reset_confirmation.html app/locale/de_DE/template/email/account_password_reset_confirmation.html
+app/locale/de_DE/template/germany/email/account_password_reset_confirmation.html app/locale/de_DE/template/germany/email/account_password_reset_confirmation.html
+app/locale/de_DE/template/email/sublogin_new.html app/locale/de_DE/template/email/sublogin_new.html
+app/locale/de_DE/template/email/sublogin_reset_password.html app/locale/de_DE/template/email/sublogin_reset_password.html
+app/locale/de_DE/template/email/sublogin_expire_refresh.html app/locale/de_DE/template/email/sublogin_expire_refresh.html
+app/locale/de_DE/MageB2B_Sublogin.csv app/locale/de_DE/MageB2B_Sublogin.csv
+app/locale/en_US/template/email/account_password_reset_confirmation.html app/locale/en_US/template/email/account_password_reset_confirmation.html
+app/locale/en_US/template/email/sublogin_new.html app/locale/en_US/template/email/sublogin_new.html
+app/locale/en_US/template/email/sublogin_reset_password.html app/locale/en_US/template/email/sublogin_reset_password.html
+app/locale/en_US/template/email/sublogin_expire_refresh.html app/locale/en_US/template/email/sublogin_expire_refresh.html
+app/locale/en_US/MageB2B_Sublogin.csv app/locale/en_US/MageB2B_Sublogin.csv
+js/mageb2b/sublogin js/mageb2b/sublogin
+app/design/frontend/default/default/layout/sublogin.xml app/design/frontend/default/default/layout/sublogin.xml
+app/design/frontend/default/default/template/sublogin app/design/frontend/default/default/template/sublogin
+skin/frontend/default/default/images/sublogin skin/frontend/default/default/images/sublogin
+
+# Clear the cache
+@shell   rm -rf $PROJECT/var/cache/* && echo "Magento Cache cleared"

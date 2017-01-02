@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+    <default>
+    </default>
+    <!-- Overriding Template File -->
+    <catalog_category_default>
+        <reference name="category.products">
+            <action method="setTemplate">
+                <template>smithandrowe/pricetoolbar/catalog/category/view.phtml</template>
+            </action>
+        </reference>
+    </catalog_category_default>
+
+    <catalog_category_layered>
+        <reference name="category.products">
+            <action method="setTemplate">
+                <template>smithandrowe/pricetoolbar/catalog/category/view.phtml</template>
+            </action>
+        </reference>
+    </catalog_category_layered>
+</layout>

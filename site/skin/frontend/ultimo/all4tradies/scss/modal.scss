@@ -1,0 +1,18 @@
+#cboxContent {
+  background: $black !important;
+  color: white !important;
+}
+
+#cboxTitle {
+  color: white !important;
+}
+
+#cboxCurrent {
+  color: white !important;
+}
+
+#cboxPrevious, #cboxNext, #cboxClose, .owl-prev, .owl-next {
+  &:hover {
+    background-color: $red !important;
+  }
+}

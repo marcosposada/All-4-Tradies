@@ -1,0 +1,311 @@
+.the-slideshow-wrapper {
+  .the-slideshow {
+    margin-right: 0;
+
+  }
+
+  i {
+    color: white;
+  }
+  .the-slideshow-banners {
+    background: #ffffff url('../images/slider-right.png') center top no-repeat;
+    height: 237px;
+    //height: 100%;
+    overflow: hidden;
+    margin-left: 0;
+    width: 26%;
+    > div {
+      height: 40%;
+      text-align: center;
+      display: block;
+      position: relative;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+
+    @media (min-width: $tablet) {
+      height: 309px;
+    }
+    @media (min-width: $desktop) {
+      height: 387px;
+    }
+    @media (min-width: 64.063em) {
+      height: 387px;
+    }
+  }
+  .slider-right-01 {
+    height: 60% !important;
+    border-bottom: 1px solid #ffffff;
+    margin-left: 10px;
+    margin-right: 10px;
+    a {
+      text-transform: uppercase;
+    }
+    img {
+      width: 85%;
+      margin: 2px auto;
+
+      @media (min-width: $desktop) {
+        width: 95%;
+      }
+    }
+    a {
+      width: 87%;
+      left: 0;
+      margin: 0;
+      position: absolute;
+      bottom: 10px;
+      background-color: $red;
+      padding: 4px 5px 2px;
+      color: white;
+      font-family: $main-font;
+      font-size: 1em;
+      opacity: 0.9;
+      transition: background-color 0.2s linear;
+
+      &:hover, &:active, &:focus {
+        background-color: white;
+        color: black;
+      }
+      @media (min-width: $tablet) {
+
+      }
+      @media (min-width: $desktop) {
+        padding: 8px 5px;
+        font-size: 1.2em;
+        width: 140px;
+      }
+    }
+
+
+  }
+  .slider-right-02 {
+    text-align: center;
+    padding-top: 10px;
+    a {
+      text-transform: uppercase;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 0.7em;
+      display: none;
+    }
+    h3 {
+      font-size: 1em;
+      margin: 2px;
+    }
+
+    h3, p {
+      color: white;
+
+    }
+    @media (min-width: $tablet) {
+      p {
+        font-size: 1em;
+        display: block;
+      }
+      h3 {
+        font-size: 1.5em;
+      }
+    }
+    @media (min-width: $desktop) {
+      h3 {
+        font-size: 2em;
+        margin: 10px 20px 0;
+      }
+    }
+  }
+  #subscribe-form {
+    //height: 25px;
+    overflow: visible;
+    width: 100%;
+
+    label {
+      display: none;
+    }
+    .validation-advice {
+      top: -50px;
+      left: 0;
+      width: 223px;
+      @media (max-width: $tablet) {
+        top: -55px;
+        width: 100%;
+        font-size: 0.85em;
+      }
+    }
+    .input-box {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .input-text, .button {
+      height: 30px;
+      display: inline;
+
+    }
+    .input-text {
+      float: left;
+      width: 100%;
+    }
+    .button {
+      float: right;
+      width: 100%;
+      margin: 0;
+      background-color: $red;
+      color: white;
+      padding: 9px;
+      text-align: center;
+      line-height: 15px;
+      transition: background-color 0.2s linear;
+      span, span span {
+        background-color: transparent;
+        opacity: 1;
+        color: inherit;
+        text-align: inherit;
+        float: none;
+        margin: 0;
+        padding: 0;
+        line-height: 15px;
+        display: inline-block;
+        transition: none;
+      }
+      &:hover, &:active, &:focus {
+        background-color: white;
+        color: black;
+      }
+
+
+    }
+    @media (min-width: $tablet) {
+      //height: 30px;
+      padding: 0;
+      margin-top: 25px;
+      .input-text, .button {
+        height: 30px;
+        display: inline;
+
+      }
+      .input-box {
+        width: 68%;
+      }
+      .button {
+        width: 31%;
+
+
+
+      }
+    }
+    @media (min-width: $desktop) {
+      margin-top: 10px;
+      position: absolute;
+      bottom: 10px;
+      width: 96%;
+      margin: 0 2%;
+      left: 0;
+    }
+
+  }
+
+}
+
+.owl-carousel .owl-wrapper-outer{
+  z-index: 2;  // added this
+}
+.owl-controls {
+  z-index: 3;
+}
+
+.owl-pagination {
+  display: none;
+}
+.owl-prev, .owl-next {
+  &:hover {
+    background-color: $red !important;
+  }
+}
+
+// Product slider in block
+
+.manufacturer-product-slider {
+  font-size: 1.5em;
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 5px;
+}
+
+.itemslider-wrapper {
+  .item {
+    text-align: center;
+    .product-name {
+     // font-family:
+      line-height:14px;
+      margin-bottom: 5px;
+      p {
+        line-height: 17px;
+        color: $black;
+      }
+      span {
+        font-size: 12px;
+
+      }
+    }
+    .price-box {
+      padding-top:20px;
+      background-color: transparent;
+
+      .price, .regular-price {
+
+        font-size: 1em;
+        .gst-txt, .gst {
+          color: $red;
+        }
+      }
+    }
+
+  }
+  .owl-controls .owl-buttons {
+    top: -45px !important;
+  }
+}
+
+.nav-block-right .itemslider-wrapper {
+  .item {
+    text-align: center;
+    .product-name {
+      // font-family:
+      line-height: 14px;
+      margin-bottom: 5px;
+      word-break: normal;
+
+      p {
+        color: $black;
+      }
+      span {
+        font-size: 12px;
+        white-space: normal !important;
+
+      }
+    }
+    .price-box {
+      background-color: transparent;
+
+      .price, .regular-price .price {
+        font-size: 2em !important;
+        display: block !important;
+        color: $red !important;
+        .gst-txt, .gst {
+          color: $red;
+          display: block !important;
+        }
+      }
+    }
+
+  }
+  .owl-controls .owl-buttons {
+    top: -35px !important;
+  }
+}
+
+.brand-slider .owl-controls .owl-buttons {
+  top: -50px !important;
+}

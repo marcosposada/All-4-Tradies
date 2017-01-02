@@ -1,0 +1,32 @@
+<?php
+    $attribute = Mage::getModel('eav/entity_attribute')
+        ->loadByCode('catalog_product', 'manufacturer');
+
+    $valuesCollection = Mage::getResourceModel('eav/entity_attribute_option_collection')
+        ->setAttributeFilter($attribute->getData('attribute_id'))
+        ->setStoreFilter(0, false);
+
+    $preparedManufacturers = array();
+    foreach($valuesCollection as $value) {
+        $preparedManufacturers[$value->getOptionId()] = $value->getValue();
+    }
+
+    echo '<div class="grid-container-spaced brands-grid">';
+    if (count($preparedManufacturers)) {
+        $mediaBase = Mage::getBaseDir('media');
+        foreach($preparedManufacturers as $optionId => $value) {
+
+
+            $x1d = preg_replace('#[^0-9a-z]+#i', $value, '_');
+            $x1d = str_replace(" ", "_", $x1d);
+            $x1d = strtolower($x1d);
+            $x1d = trim($x1d);
+
+            if (file_exists($mediaBase.'/wysiwyg/infortis/brands/' . $x1d . '.png')) {
+                $brand_image = '<a href="catalogsearch/advanced/result/?manufacturer%5B%5D='.$optionId.'"><img src="/media/wysiwyg/infortis/brands/' . $x1d . '.png" /></a>';
+                echo '<div class="grid12-2 brand-element">' . $brand_image .  '</div>';
+            }
+
+        }
+        echo "</div>";
+    }

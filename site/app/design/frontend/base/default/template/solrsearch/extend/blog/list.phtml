@@ -1,0 +1,16 @@
+<?php $collection = $this->getCollection()?>
+<?php if($collection->getSize() > 0):?>
+<ul>
+	<?php foreach ($collection as $post):?>
+	<li>
+		<div class="blog blog-summary">
+	        <?php //maybe a better way of doing this maybe a getChildHtml('summary_');
+	        echo $this->getSummaryBlock($post)->toHtml();
+	        ?>
+	    </div>
+	</li>
+	<?php endforeach;?>
+</ul>
+<div class="toolbar"><?php echo $this->getPagerHtml(); ?></div>
+<?php endif;?>
+    

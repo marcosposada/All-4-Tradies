@@ -1,0 +1,86 @@
+<div class="box simple_contact">
+    <form id="simple_contact_form" name="simple_contact_form" action="<?php echo $this->getUrl('forms/') ?>supplierenquiry/sendemail" method="post">
+        <div class="fieldset">
+
+            <ul class="form-list">
+                <li class="fields">
+                    <div class="field">
+                        <div class="input-box">
+                            <label for="name">Company Name<span class="required">*</span></label><br>
+
+                            <input name="company-name" id="company-name" title="company-name" value="" class="required-entry input-text" type="text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="input-box">
+                            <label for="name">Your Name<span class="required">*</span></label><br>
+                            <input name="your_name" id="your_name" title="your_name" value="" class="required-entry input-text" type="text">
+                        </div>
+                    </div>
+                </li>
+                <li class="fields">
+                    <div class="field">
+                        <div class="input-box">
+                            <label for="name">Position<span class="required">*</span></label><br>
+
+                            <input name="position" id="position" title="position" value="" class="required-entry input-text" type="text">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="input-box">
+                            <label for="email">E-Mail<span class="required">*</span></label><br>
+                            <input name="email" id="email" title="Email" value="" class="required-entry input-text validate-email" type="text">
+                        </div>
+                    </div>
+
+                </li>
+                <li class="fields">
+
+                    <div class="input-box">
+                        <label for="name">Telephone<span class="required">*</span></label><br>
+
+                        <input name="phone" id="phone" title="phone" value="" class="required-entry input-text" type="text">
+                    </div>
+
+                </li>
+                <li class="fields">
+                    <div class="field">
+                        <div class="input-box">
+                            <label for="name">Market you want to reach<span class="required">*</span></label><br>
+
+                            <select name="market" id="market" class="input-text required-entry" style="">
+                                <option value="">--Please Select--</option>
+                                <option value="Tradie">Tradie</option>
+                                <option value="DIY">DIY</option>
+                                <option value="Corporate">Corporate</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="input-box">
+                            <label for="name">How can we help you<span class="required">*</span></label><br>
+                            <select name="help" id="help" class="input-text required-entry" style="">
+                                <option value="">--Please Select--</option>
+                                <option value="Retail your Product">Retail your Product</option>
+                                <option value="Product Promotion">Product Promotion</option>
+                                <option value="Product Distribution">Product Distribution</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li class="fields">
+                    <div class="input-box"><label for="comment">Please provide a brief description of your products</label><br>
+                        <textarea name="comment" id="comment" title="Comment" class="input-text" style="height:100px;" cols="50" rows="3"></textarea>
+                    </div>
+                </li>
+            </ul>
+            <div class="buttons-set">
+                <p class="required"><?php echo $this->__("<font color='red'>*</font> Required Fields") ?></p>
+                <input type="text" name="realSend" style="display: none;">
+                <input type="text" name="type" value="feedback" style="display: none;">
+                <button class="button" type="submit" title="<?php echo $this->__('Submit') ?>" ><span><?php echo $this->__('Submit') ?></span></button>
+            </div>
+            <input type="hidden" name="request_flag" value="1"/>
+    </form>
+</div>

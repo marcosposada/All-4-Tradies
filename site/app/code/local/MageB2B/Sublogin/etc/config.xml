@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <MageB2B_Sublogin>
+            <version>1.5</version>
+        </MageB2B_Sublogin>
+    </modules>
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <sublogin>
+                    <files>
+                        <default>MageB2B_Sublogin.csv</default>
+                    </files>
+                </sublogin>
+            </modules>
+        </translate>
+        <menu>
+            <customer>
+                <children>
+                    <sublogin module="sublogin">
+                        <title>Sublogins View</title>
+                        <sort_order>0</sort_order>
+                        <action>sublogin/sublogin</action>
+                    </sublogin>
+                </children>
+            </customer>
+        </menu>
+    </adminhtml>
+
+    <global>
+
+        <helpers>
+            <sublogin>
+                <class>MageB2B_Sublogin_Helper</class>
+            </sublogin>
+        </helpers>
+
+        <models>
+            <sublogin>
+                <class>MageB2B_Sublogin_Model</class>
+                <resourceModel>sublogin_resource</resourceModel>
+            </sublogin>
+            <!-- starting from magento 1.6 $this->_getResource() from model_customer returns customer_resource so just overwrite both -->
+            <!-- pre 1.6: Mage_Customer_Model_Entity_Customer -->
+            <customer_entity>
+                <rewrite>
+                    <customer>MageB2B_Sublogin_Model_CustomerEntity</customer>
+                </rewrite>
+            </customer_entity>
+            <!-- post 1.6: Mage_Customer_Model_Resource_Customer -->
+            <customer_resource>
+                <rewrite>
+                    <customer>MageB2B_Sublogin_Model_CustomerResource</customer>
+                </rewrite>
+            </customer_resource>
+
+            <sales_resource>
+                <rewrite>
+                    <quote>MageB2B_Sublogin_Model_SalesQuote</quote>
+                </rewrite>
+            </sales_resource>
+
+            <sublogin_resource>
+                <class>MageB2B_Sublogin_Model_Mysql4</class>
+                <entities>
+                    <sublogin>
+                        <table>customer_sublogin</table>
+                    </sublogin>
+                </entities>
+            </sublogin_resource>
+        </models>
+        <resources>
+            <sublogin_setup>
+                <setup>
+                    <module>MageB2B_Sublogin</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </sublogin_setup>
+            <sublogin_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </sublogin_write>
+            <sublogin_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </sublogin_read>
+        </resources>
+
+        <blocks>
+            <sublogin>
+                <class>MageB2B_Sublogin_Block</class>
+            </sublogin>
+            <adminhtml>
+                <rewrite>
+                    <sales_order_create_form_account>MageB2B_Sublogin_Block_Admin_OrderAccount</sales_order_create_form_account>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+
+        <events>
+            <controller_front_init_before>
+                <observers>
+                    <initBefore>
+                        <type>singleton</type>
+                        <class>MageB2B_Sublogin_Model_Observer</class>
+                        <method>controlFrontInitBefore</method>
+                    </initBefore>
+                </observers>
+            </controller_front_init_before>
+
+            <customer_load_after>
+                <observers>
+                    <sublogin>
+                        <type>singleton</type>
+                        <class>sublogin/observer</class>
+                        <method>customerLoadAfter</method>
+                    </sublogin>
+                </observers>
+            </customer_load_after>
+            <customer_save_after>
+                <observers>
+                    <sublogin>
+                        <type>singleton</type>
+                        <class>sublogin/observer</class>
+                        <method>customerSaveAfter</method>
+                    </sublogin>
+                </observers>
+            </customer_save_after>
+            <customer_save_before>
+                <observers>
+                    <sublogin>
+                        <type>singleton</type>
+                        <class>sublogin/observer</class>
+                        <method>customerSaveBefore</method>
+                    </sublogin>
+                </observers>
+            </customer_save_before>
+            <customer_delete_after>
+                <observers>
+                    <sublogin>
+                        <type>singleton</type>
+                        <class>sublogin/observer</class>
+                        <method>customerDeleteAfter</method>
+                    </sublogin>
+                </observers>
+            </customer_delete_after>
+            <customer_logout>
+                <observers>
+                    <sublogin>
+                        <type>singleton</type>
+                        <class>sublogin/observer</class>
+                        <method>customerLogout</method>
+                    </sublogin>
+                </observers>
+            </customer_logout>
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <sublogin>
+                        <type>singleton</type>
+                        <class>sublogin/observer</class>
+                        <method>toHtmlBefore</method>
+                    </sublogin>
+                </observers>
+            </core_block_abstract_to_html_before>
+        </events>
+
+        <template>
+            <email>
+                <sublogin_email_new translate="label" module="sublogin">
+                    <label>Sublogin new</label>
+                    <file>sublogin_new.html</file>
+                    <type>html</type>
+                </sublogin_email_new>
+                <sublogin_email_reset_password translate="label" module="sublogin">
+                    <label>Sublogin password reset</label>
+                    <file>sublogin_reset_password.html</file>
+                    <type>html</type>
+                </sublogin_email_reset_password>
+                <sublogin_email_expire_refresh translate="label" module="sublogin">
+                    <label>Sublogin refresh expired account</label>
+                    <file>sublogin_expire_refresh.html</file>
+                    <type>html</type>
+                </sublogin_email_expire_refresh>
+            </email>
+        </template>
+    </global>
+
+    <frontend>
+        <routers>
+           <sublogin>
+              <use>standard</use>
+              <args>
+                  <module>MageB2B_Sublogin</module>
+                  <frontName>sublogin</frontName>
+              </args>
+           </sublogin>
+           <customer>
+                <args>
+                    <modules>
+                        <MageB2B_Sublogin before="Mage_Customer">MageB2B_Sublogin</MageB2B_Sublogin>
+                    </modules>
+                </args>
+            </customer>
+        </routers>
+
+        <layout>
+            <updates>
+                <sublogin>
+                    <file>sublogin.xml</file>
+                </sublogin>
+            </updates>
+        </layout>
+
+        <translate>
+            <modules>
+                <MageB2B_Sublogin>
+                    <files>
+                        <default>MageB2B_Sublogin.csv</default>
+                    </files>
+                </MageB2B_Sublogin>
+            </modules>
+        </translate>
+    </frontend>
+
+    <default>
+        <sublogin>
+            <email>
+                <new>sublogin_email_new</new>
+                <reset_password>sublogin_email_reset_password</reset_password>
+                <expire_refresh>sublogin_email_expire_refresh</expire_refresh>
+            </email>
+        </sublogin>
+    </default>
+</config>

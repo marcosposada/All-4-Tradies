@@ -1,0 +1,13 @@
+<?php $collection = $this->getCollection()?>
+<?php if($collection->getSize() > 0):?>
+<ul>
+	<?php foreach ($collection as $page):?>
+	<li>
+		<p><a href="<?php echo Mage::getUrl(null, array('_direct' => $page->getIdentifier()))?>"><?php echo $page->getTitle();?></a></p>
+		<p><?php echo $this->softTrim($page->getContent(), 500)?></p>
+	</li>
+	<?php endforeach;?>
+</ul>
+<div class="toolbar"><?php echo $this->getPagerHtml(); ?></div>
+<?php endif;?>
+    

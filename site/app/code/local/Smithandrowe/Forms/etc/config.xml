@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Smithandrowe_Forms>
+            <version>0.1.0</version>
+        </Smithandrowe_Forms>
+    </modules>
+    <frontend>
+        <routers>
+            <form>
+                <use>standard</use>
+                <args>
+                    <module>Smithandrowe_Forms</module>
+                    <frontName>forms</frontName>
+                </args>
+            </form>
+        </routers>
+    </frontend>
+</config>

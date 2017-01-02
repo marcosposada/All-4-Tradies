@@ -1,0 +1,10 @@
+<?php
+    //Scan the directory for adhoc promos
+    $dir = "media/promo/cms/adhocs/";
+    $files = glob($dir.'*.png');
+
+    //Shuffle the file list to get random file, then display
+    shuffle($files);
+    if ($files) :
+        echo '<img src="'.$files[0].'" />';
+    endif;

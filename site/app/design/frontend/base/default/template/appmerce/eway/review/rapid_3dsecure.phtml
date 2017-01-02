@@ -1,0 +1,10 @@
+<?php $d3SecureUrl = Mage::app()->getRequest()->getParam('D3SecureUrl') ?>
+<?php if ($d3SecureUrl): ?>
+<script type="text/javascript">
+//<![CDATA[
+	window.location.replace("<?php echo $d3SecureUrl ?>");
+//]]>
+</script>
+<?php else:?>
+
+<?php endif?>

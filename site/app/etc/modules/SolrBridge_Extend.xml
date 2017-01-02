@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SolrBridge_Extend>
+            <active>false</active>
+            <codePool>community</codePool>
+            <depends>
+				<SolrBridge_Solrsearch />
+			</depends>
+        </SolrBridge_Extend>
+    </modules>
+</config> 

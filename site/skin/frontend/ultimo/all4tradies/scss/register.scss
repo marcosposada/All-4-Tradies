@@ -1,0 +1,124 @@
+.account-create {
+  .page-title {
+    padding: 0px;
+    margin-bottom: 5px;
+  }
+  .fieldset {
+    padding: 0px;
+    .legend {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  @media (max-width: $tablet) {
+    .field {
+      width: 100% !important;
+    }
+    input {
+      width: 100% !important;
+    }
+  }
+  @media (min-width: $desktop) {
+    .page-title {
+      padding: 0 0 0 65px;
+    }
+    .fieldset {
+      padding: 0 0 0 65px;
+    }
+  }
+  ul {
+    margin: 20px 0;
+    li {
+      padding-left: 0px;
+    }
+  }
+
+  h1 {
+    color: $red;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-right: 60px !important;
+  }
+
+  .buttons-set {
+    padding: 20px 10px 0 0;
+    margin: 0;
+    text-align: center;
+    button {
+      float:none;
+      padding-bottom:0 !important;
+      span {
+        height: 40px;
+        padding-top: 0px;
+        background-color: $red;
+        color: white;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        font-family: $main-font;
+        padding-bottom:0 !important;
+        text-transform: uppercase;
+        &:hover {
+          background-color: $yellow;
+          color: $black;
+        }
+      }
+    }
+    @media (min-width: $desktop) {
+      padding-top: 20px;
+      button {
+        float: right;
+      }
+    }
+  }
+  .grid12-4 {
+    float: right !important;
+  }
+}
+
+#sociallogin_button {
+  float: right;
+
+  width: 100%;
+  padding-left: 0px;
+  @media (min-width: $desktop) {
+
+    padding-left: 20px;
+    border-left: 1px solid #F2F2F2 ;
+    width: 70%;
+  }
+  ul {
+    background-color: #F2F2F2;
+    padding: 20px 20px 20px 10px;
+    float: none !important;
+    li {
+      text-align: center;
+      color: $red;
+      width: 100%;
+      float: none !important;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      button {
+        cursor: pointer;
+        width: 100%;
+      }
+    }
+  }
+}
+
+#bt-loginfb {
+  @include social-button(#3B5998, '\f09a');
+}
+
+#bt-logintw {
+  @include social-button(#55ACEE, '\f099');
+}
+
+#bt-logingo {
+  @include social-button(#D73D32, '\f0d5');
+}
+
+#bt-loginlinked {
+  @include social-button(#1C86BD, '\f0e1');
+}

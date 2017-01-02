@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Smithandrowe_Backgroundimages>
+			<active>true</active>
+			<codePool>local</codePool>
+			<depends>
+		        <Mage_Cms/>
+		        <Mage_Adminhtml/>
+		      </depends>
+		</Smithandrowe_Backgroundimages>
+	</modules>
+</config>

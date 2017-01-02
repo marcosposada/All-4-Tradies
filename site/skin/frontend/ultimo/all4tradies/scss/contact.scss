@@ -1,0 +1,41 @@
+#contactForm {
+  padding: 0 20px;
+  .fieldset {
+    padding: 0;
+  }
+  .buttons-set {
+
+  }
+  .buttons-set {
+    margin: 0;
+
+    button {
+      float: none !important;
+      padding-bottom:0 !important;
+      span span {
+        padding: 0 30px;
+        height: 40px;
+        background-color: $red;
+        color: white;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        font-family: $main-font;
+        padding-bottom:0 !important;
+        text-transform: uppercase;
+        &:hover {
+          background-color: $yellow;
+          color: $black;
+        }
+      }
+    }
+    @media (min-width: $desktop) {
+      padding-top: 20px;
+      button {
+        float: right;
+      }
+    }
+    p {
+      text-align: left !important;
+    }
+  }
+}

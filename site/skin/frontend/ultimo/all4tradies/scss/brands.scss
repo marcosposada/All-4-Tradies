@@ -1,0 +1,81 @@
+.block-brands {
+  h3 {
+    padding: 10px 0 5px 0 !important;
+    margin: 0 !important;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 2em;
+  }
+  .itemslider-wrapper, .company-info-content {
+    padding-top: 15px;
+  }
+  .social {
+    padding-top: 15px;
+    border-top: 1px solid #E5E5E5;
+    .text {
+      font-family: $main-font;
+      font-size: 1.1em;
+      color: $red;
+    }
+  }
+}
+
+
+.phone-text-with-icon {
+  float: none;
+  padding-bottom: 10px !important;
+  vertical-align: middle;
+  line-height:normal;
+  color: #333333;
+  &:before {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    padding: 4px 4px 4px 4px;
+    content: "\f10b";
+    border-radius: 50%;
+    color: #fff;
+    font-family: FontAwesome;
+    font-size: 1.9em;
+    background-color: $red;
+    vertical-align: middle;
+    text-align: center;
+    margin-right: 10px;
+
+  }
+  span {
+    display: block;
+    padding-left: 30px;
+    color: $green;
+  }
+}
+
+.email-text-with-icon {
+  clear: both;
+  float: none;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  vertical-align: middle;
+  line-height:normal;
+  color: #333333;
+
+  &:before {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    padding: 8px 4px 0px 4px;
+    content: "\f0e0";
+    border-radius: 50%;
+    color: #fff;
+    font-family: FontAwesome;
+    font-size: 1.3em;
+    background-color: $red;
+    vertical-align: middle;
+    text-align: center;
+    margin-right: 10px;
+  }
+  span {
+    display: block;
+    padding-left: 30px;
+    color: $green;
+  }
+}

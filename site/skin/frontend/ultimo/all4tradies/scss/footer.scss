@@ -1,0 +1,258 @@
+.footer-container {
+  margin-top: 20px;
+  .grid-full {
+    width: 100%;
+    margin-left: 0;
+    margin-righ: 0;
+  }
+  a {
+    color: #fff;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+.footer-top-container {
+  background-color: $footer-top-bg;
+  font-family: $main-font !important;
+
+  .section {
+    padding:20px 0;
+    .copy {
+      h2 {
+        font-family: $main-font !important;
+        color: #fff;
+        margin: 10px 0 5px 0;
+        padding: 0;
+        font-size: 1.6rem;
+        font-weight: normal;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-align: center;
+        @media (min-width: $desktop) {
+          margin-bottom: 0;
+          text-align: left;
+        }
+      }
+      &.logged_in {
+        h2 {
+          font-size: 1.5em;
+          text-align: center;
+          @media (min-width: $desktop) {
+            font-size: 2.2rem;
+          }
+        }
+      }
+    }
+
+    .sign-up {
+      a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        max-width:300px;
+        margin: 0 auto;
+        padding: 15px 0 8px 0;
+        background-color: #000;
+        color: #fff;
+        font-size:1.8em;
+        letter-spacing: 1px;
+
+        &.active, &:hover {
+          background-color: #fff;
+          color: #000;
+          transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+          -moz-transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+          -webkit-transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+          -o-transition: background-color 300ms ease-in-out, background-position 300ms ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.footer-primary-container {
+  padding: 0 0 20px 0;
+  color: #fff;
+  background: #000 url("../images/slider-right.png") 0 0 repeat;
+  border-top: 2px solid #000;
+  .footer-primary {
+    background-color: transparent;
+    .links {
+      padding-top: 20px;
+      .grid12-4 { margin-left: 0;}
+      a {
+        color: #fff;
+      }
+      img {
+        width: 60px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        vertical-align: middle;
+        @media (min-width: $desktop) {
+          display: inline-block;
+        }
+      }
+      h2 {
+        display: block;
+        padding: 12px 5px 0 5px;
+        vertical-align: middle;
+        font-family: Arial;
+        font-size: 18px;
+        text-align: center;
+        @media (max-width: $tablet) {
+          font-size: 15px;
+          display: inline-block;
+
+        }
+        @media (min-width: $desktop) {
+          display: inline-block;
+          text-align: left;
+        }
+      }
+      ul {
+        margin-bottom: 15px;
+        text-align: center;
+        min-height: auto;
+        @media (min-width: $desktop) {
+          min-height: 220px;
+        }
+        li {
+          padding: 6px 0;
+
+          a {
+            font-weight: lighter;
+            &:hover {
+              color: $yellow;
+              text-decoration: none;
+            }
+          }
+        }
+        @media (min-width: $desktop) {
+
+          text-align: left;
+        }
+      }
+      hr {
+        clear: both;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+    }
+    .contacts {
+      font-family: $main-font;
+      clear: both;
+      #number {
+        margin-left: 0;
+        font-size: 1.5em;
+      }
+      #email {
+        margin-left: 0;
+        font-size: 1.2em;
+      }
+      hr {
+        margin-top: 30px;
+      }
+      @media (max-width: $tablet) {
+        border-top: 2px solid #E5EBEB;
+        margin-top: 20px;
+        padding-top: 10px;
+        #email {
+          margin-left:0;
+        }
+        hr {
+          margin-left:0;
+          margin-top: 50px;
+        }
+      }
+    }
+
+    .eway {
+      background: url('../images/footerribbon.png') right top no-repeat;
+      background-size: 100% 100%;
+      min-height: 335px;
+
+      #block_eway {
+        text-align: center;
+        color: #000;
+        h3 {
+          margin: 8px;
+          font-family: Arial;
+          font-weight: bolder;
+          font-size: 1.3em;
+          line-height: 1.0em;
+          @media (max-width: $tablet) {
+            font-size: 1.1em;
+            line-height: 0.9em;
+          }
+        }
+        p {
+          padding: 0 20px;
+          line-height: 12px;
+          font-size: 0.8em;
+        }
+        #logo-eway {
+          margin-top: 5px;
+          width: 70%;
+          max-width: 140px;
+        }
+        ul {
+          margin: 5px;
+          padding: 0 2px;
+          list-style: none;
+          li {
+            display: inline;
+            img {
+              width: 48px;
+              height: 30px;
+              margin: 4px;
+              @media (min-width: $tablet) {
+                margin: 3px;
+              }
+            }
+          }
+          @media (min-width: $desktop) {
+            li:nth-child(3):after {
+              content:"\A";
+              white-space:pre;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-bottom-container {
+  background-color: #000;
+  .item {
+    position: relative;
+    color: #fff;
+    .footer-copyright {
+      padding-top: 10px;
+      display: inline-block;
+      float: left;
+      @media (max-width: $tablet) {
+        float: none;
+      }
+    }
+    .logo-smith-and-rowe {
+      display: block;
+      float: none;
+      margin: -2px auto;
+      width: 75px;
+      height: 30px;
+      a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url(../images/smith-and-rowe-web-dev-logo.png);
+        text-indent: -100000px;
+        background-size: 75px;
+      }
+
+    }
+  }
+}

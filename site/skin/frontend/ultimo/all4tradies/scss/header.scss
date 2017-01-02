@@ -1,0 +1,33 @@
+.header-main {
+  .grid-full {
+    margin-right: 0 !important;
+  }
+}
+
+.block-header-top-secondary {
+  text-align: center;
+  margin-top: 10px;
+  .account-links {
+    text-align: right;
+    li {
+      display: inline-block;
+      margin: 0px;
+      .first, .last {
+        margin: 0;
+        a {
+          color: black;
+        }
+      }
+    }
+  }
+  @media (min-width: $tablet-min) {
+    text-align: right;
+    margin-top: 50px;
+    .account-links {
+      li {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+

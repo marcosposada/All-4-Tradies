@@ -1,0 +1,25 @@
+<?php 
+$catalogSearchHelper =  $this->helper('catalogsearch');
+?>
+<form id="search_mini_form" action="<?php echo $this->helper('solrsearch')->getResultUrl() ?>" method="get">
+    <div class="input-box">
+        <label for="search"><?php echo $this->__('Search:') ?></label>
+        <input id="search" type="search" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>" class="input-text required-entry" maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>" placeholder="<?php echo $this->__('Search entire store here...') ?>" />
+        <button type="submit" title="<?php echo $this->__('Search') ?>" class="button search-button"><span><span><?php echo $this->__('Search') ?></span></span></button>
+    </div>
+
+    <div id="search_autocomplete" class="search-autocomplete"></div>
+    <script type="text/javascript">
+        //<![CDATA[
+            var searchForm = new Varien.searchForm('search_mini_form', 'search', '<?php echo $this->__('Search entire store here...') ?>');
+        //]]>
+        </script>
+        <script type="text/javascript">
+        //<![CDATA[
+            var Manager;
+			Manager = new AjaxSolr.Manager({solrUrl: '<?php echo $this->helper('sbsext')->getAjaxQueryUrl();?>?r='});
+            Manager.addWidget(new AjaxSolr.AutocompleteWidget(<?php echo $this->helper('solrsearch')->getAutocompleteConfig('search', 'search_mini_form')?>));			
+			Manager.init();
+        //]]>
+        </script>
+</form>

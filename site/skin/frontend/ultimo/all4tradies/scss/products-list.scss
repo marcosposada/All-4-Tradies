@@ -1,0 +1,172 @@
+.products-list {
+  .product-name {
+    a {
+      font-family: $font-default;
+      p {
+        font-family: $main-font;
+        margin-bottom: 5px;
+        display: block;
+        color: $red;
+        font-size: 1.2em;
+      }
+      span {
+        text-transform: none;
+      }
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+  .right-column {
+    p {
+      text-align: center;
+    }
+  }
+  .button {
+    width: 100% !important;
+    max-width: 200px;
+    margin: 0 auto;
+    span {
+      font-family: $main-font;
+      font-size: 1.35em;
+      width: 100% !important;
+      background-color: $btn-hover-text-color !important;
+      border-bottom: 2px solid $red;
+      color: white;
+      margin:0 auto;
+
+      span {
+        padding: 3px 0 2px 0  !important;
+        margin: 0;
+        font-size: 1.1em !important;
+        height: 40px;
+        i {
+          margin-right: 10px;
+        }
+      }
+      &:hover {
+        background-color: $yellow !important;
+        color: $btn-hover-text-color;
+      }
+    }
+  }
+  .add-to-links {
+    width: 100%;
+    //max-width: 180px;
+
+    li {
+      width: 100%;
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+  .link-compare {
+    //font-family: $main-font;
+    background-color: none;
+    display: inline-block;
+    width: 110px !important;
+    padding: 5px 0 8px 0  !important;
+    margin:0 !important;
+    font-size: 1.3em !important;
+    //font-family: $main-font;
+    //text-transform: uppercase;
+    text-align: center;
+    color: #aaaaaa;
+    i {
+      font-style: normal;
+      line-height: 0;
+      padding: 0;
+      margin:0;
+      color: white;
+      &.fa-chevron-left {
+        //margin-right: 8px;
+      }
+    }
+    span.icon {
+      border-radius: 0;
+      margin-left: 7px !important;
+      background-color: $brands-block-hover;
+
+    }
+    &:hover, &:active, &:focus {
+      //background-color: $red;
+      color: $red;
+      span.icon {
+        //background-position: -57px -57px;
+        background-color: $yellow;
+      }
+    }
+  }
+  .price-box {
+
+    border-top-style: none !important;
+    border-top-width: 0;
+    .price {
+      font-family: $main-font;
+      color: $red;
+      font-size: 1.8rem !important;
+      line-height: 2.25em;
+      .price-from {
+        display: none;
+      }
+    }
+    br {
+      display: none;
+    }
+    .gst-txt {
+      font-family: Arial;
+      font-size: 0.8rem;
+      color: #AAA;
+    }
+    .regular-price {
+      .price {
+        font-size: 1.5em;
+      }
+    }
+
+  }
+  .link-learn {
+    display: none;
+
+  }
+
+  .bulk-discounts-apply {
+    display: block;
+    width: 100% !important;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: $yellow;
+    text-align: center;
+    padding: 3px 0;
+
+  }
+
+  /*
+  .bulk-discounts-apply {
+      position: absolute;
+
+      display: none;
+      width: 27.33% !important;
+      max-width: 265px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      background-color: $yellow;
+      text-align: center;
+      padding: 3px 0;
+
+  }
+
+  .item {
+
+    &:hover {
+      .bulk-discounts-apply {
+        display: block;
+        position: absolute;
+        top: 28px;
+        left: 28px;
+      }
+    }
+  }
+  */
+}

@@ -1,0 +1,106 @@
+.products-grid {
+  position:relative;
+  .product-name {
+    a {
+      font-family: $font-default;
+      p {
+        font-family: $main-font;
+        margin-bottom: 5px;
+        display: block;
+        color: $red;
+        font-size: 1.2em;
+      }
+      span {
+        text-transform: none;
+      }
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+  .display-onhover {
+    .button {
+      width: 100% !important;
+      span {
+        font-family: $main-font;
+        font-size: 1em;
+        width: 100% !important;
+        background-color: $btn-hover-text-color !important;
+        border-bottom: 2px solid $red;
+        color: white;
+        margin:0 auto;
+        span {
+          padding: 9px 0 2px 0  !important;
+          margin: 0;
+          font-size: 1.3em !important;
+          i {
+            margin-right: 10px;
+          }
+        }
+        &:hover {
+          background-color: $yellow !important;
+          color: $btn-hover-text-color;
+        }
+      }
+    }
+    .link-compare {
+      //font-family: $main-font;
+      background-color: none;
+      display: inline-block;
+      width: 70% !important;
+      padding: 12px 0 8px 0  !important;
+      margin:0 !important;
+      font-size: 1.3em !important;
+      color: $brands-block-hover;
+      i {
+        font-style: normal;
+        line-height: 0;
+        padding: 0;
+        margin:0;
+        color: white;
+        &.fa-chevron-left {
+          //margin-right: 8px;
+        }
+      }
+
+      span.icon {
+        border-radius: 0;
+        margin-left: 7px !important;
+        background-color: $brands-block-hover;
+
+      }
+      &:hover, &:active, &:focus {
+        //background-color: $red;
+
+        color: $red;
+        span.icon {
+          background-color: $red;
+
+        }
+      }
+    }
+    @media (min-width: $desktop) {
+      .button {
+        width: 100% !important;
+        span {
+          span {
+            font-size: 1.5em !important;
+          }
+        }
+      }
+    }
+  }
+  .item {
+
+    &:hover {
+      .bulk-discounts-apply {
+        span {
+          margin: 0 23px;
+
+        }
+      }
+    }
+
+  }
+}
+

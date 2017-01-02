@@ -1,0 +1,80 @@
+.promo-blocks {
+  margin-top: 10px;
+
+  .grid-container {
+    margin: 0 -1%;
+    img {
+      width: 100%;
+    }
+
+    div {
+      position: relative;
+      img + a {
+        border:none;
+        position: absolute;
+        display: inline-block;
+        background-color: $red;
+        color: $yellow;
+        padding: 4px 11px 0px 11px;
+        font-family: $main-font;
+        font-size: 0.9em;
+        bottom: 3px;
+        left: 5px;
+        @media (min-width: $tablet) {
+          bottom: 5px;
+          left: 8px;
+          font-size: 1.5em;
+          padding: 10px 18px 5px 18px;
+        }
+        &:hover {
+          background-color: $yellow;
+          color: $black;
+        }
+      }
+    }
+  }
+  ul {
+    overflow: hidden;
+    text-align: center;
+    //margin: 0 -2%;
+    display: block;
+    float: left;
+    width: 100%;
+    li {
+      display: inline-block;
+      width: 23%;
+
+      margin: 20px 1%;
+      //margin: 0 0.5%;
+      &.first {
+        float: left;
+
+        margin-left: 0;
+        margin-right: 0;
+      }
+      &.last {
+        float: right;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+    }
+  }
+}
+
+.new-products-header {
+  padding: 15px 0 10px 0;
+  text-align: center;
+  background-color: $red;
+  color: $yellow;
+  overflow:hidden;
+  margin-bottom: 12px;
+   h3 {
+     margin: 0;
+     font-size: 2.2em;
+   }
+  &:hover {
+    color: white;
+    background-color: $black;
+  }
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<sbsext translate="label" module="solrsearch">
+			<label>Extend settings</label>
+			<tab>solrbridge</tab>
+			<class>separator-top</class>
+			<frontend_type>text</frontend_type>
+			<sort_order>20</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<frontend_model>adminhtml/system_config_form</frontend_model>
+			<groups>
+				<!--GENERAL SETTING -->
+				<settings translate="label" module="sbsext">
+					<label>Extend Setting</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<frontend_model>adminhtml/system_config_form_fieldset</frontend_model>
+					<fields>
+						<allow_cmspage_search translate="label comment" module="sbsext">
+							<label>Allow CMS Page Search.</label>							
+							<frontend_type>select</frontend_type>
+							<sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+						</allow_cmspage_search>
+						<allow_cmspage_search_autocomplete translate="label comment" module="sbsext">
+							<label>Allow CMS Page Autocomplete.</label>							
+							<frontend_type>select</frontend_type>
+							<sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+						</allow_cmspage_search_autocomplete>
+						<allow_blog_search translate="label comment" module="sbsext">
+							<label>Allow Blog Search.</label>
+							<comment>This is the integration SolrBridge with Blog module http://www.magentocommerce.com/magento-connect/nblog-blog-extension-by-neotheme.html</comment>					
+							<frontend_type>select</frontend_type>
+							<sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+						</allow_blog_search>
+						<allow_blog_search_autocomplete translate="label comment" module="sbsext">
+							<label>Allow Blog Autocomplete.</label>							
+							<frontend_type>select</frontend_type>
+							<sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+						</allow_blog_search_autocomplete>
+					</fields>
+				</settings>			
+			</groups>
+		</sbsext>
+	</sections>
+</config>
